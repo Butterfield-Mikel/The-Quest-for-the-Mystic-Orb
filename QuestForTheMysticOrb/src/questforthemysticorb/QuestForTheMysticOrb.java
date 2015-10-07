@@ -5,6 +5,8 @@
  */
 package questforthemysticorb;
 
+import model.Player;
+
 /**
  *
  * @author Mikel
@@ -15,8 +17,8 @@ public class QuestForTheMysticOrb {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("This works?");
+        
+        Player playerOne = new Player();
     }
     
 }
