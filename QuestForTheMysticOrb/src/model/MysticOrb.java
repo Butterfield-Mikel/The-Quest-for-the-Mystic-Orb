@@ -5,10 +5,23 @@
  */
 package model;
 
+import java.io.Serializable;
 /**
  *
  * @author Rich
  */
-public class MysticOrb {
+public class MysticOrb implements Serializable{
     
+    public MysticOrb() {
+    }
+    
+    private String name;
+    
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
