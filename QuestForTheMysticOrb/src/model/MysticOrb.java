@@ -66,7 +66,9 @@ public class MysticOrb implements Serializable{
         return true;
     }
     
-    
+    public static void main(String[] args) { 
+    System.out.println("The Mysic Orb");
+    }
     
     
 }

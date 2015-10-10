@@ -92,6 +92,8 @@ public class NonPlayerCharacter implements Serializable{
         return "NonPlayerCharacter{" + "name=" + name + ", row=" + row + ", col=" + col + ", location=" + location + '}';
     }
 
-
+    public static void main(String[] args) { 
+    System.out.println("The Non-Player Character");
+    }
     
 }

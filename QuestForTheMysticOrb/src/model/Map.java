@@ -66,5 +66,8 @@ public class Map implements Serializable{
         return true;
     }
     
+    public static void main(String[] args) { 
+    System.out.println("The Map");
+    }
     
 }
