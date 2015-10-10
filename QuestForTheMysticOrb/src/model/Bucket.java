@@ -66,4 +66,5 @@ public class Bucket implements Serializable {
     public void setWater(String water) {
         this.water = water;
     }
+    
 }

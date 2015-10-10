@@ -19,6 +19,10 @@ public class QuestForTheMysticOrb {
     public static void main(String[] args) {
         
         Player playerOne = new Player();
+        System.out.println("This works");
+        System.out.println(Player.class);
+        System.out.println("This works");
+        System.out.println("This works");
     }
     
 }
