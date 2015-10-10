@@ -80,6 +80,6 @@ public class Location implements Serializable {
         this.item = item;
     }
   
-     
+    
     
 }
