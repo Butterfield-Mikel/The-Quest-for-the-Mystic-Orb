@@ -14,22 +14,22 @@ import java.util.Objects;
  */
 public class Item implements Serializable{
     
-    private string getName
-    private string getDescription        
+    private String getName;
+    private String getDescription;       
 
-    public string getGetName() {
+    public String getGetName() {
         return getName;
     }
 
-    public void setGetName(string getName) {
+    public void setGetName(String getName) {
         this.getName = getName;
     }
 
-    public string getGetDescription() {
+    public String getGetDescription() {
         return getDescription;
     }
 
-    public void setGetDescription(string getDescription) {
+    public void setGetDescription(String getDescription) {
         this.getDescription = getDescription;
     }
 
@@ -65,5 +65,5 @@ public class Item implements Serializable{
     }
     
             
-            System.out.println("This works");
+           
 } 
