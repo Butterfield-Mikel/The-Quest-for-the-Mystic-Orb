@@ -9,18 +9,17 @@ package byui.cit260.questforthemysticorb;
  *
  * @author Mikel
  */
-public class KitchenControl {
-    public static (getKnife) {
-        boolean getKnife;
-            if (getKnife = true)
-                return true;
-           
-        return null;
-    }
-    private static class getKnife {
+public class ShipControl {
+    public getOnShip {
+        boolean getOnShip;
+            if(getOnShip = true)
+               return gameOver
+            
+                }
 
-        public getKnife() {
+    private static class getOnShip {
+
+        public getOnShip() {
         }
     }
-    
 }

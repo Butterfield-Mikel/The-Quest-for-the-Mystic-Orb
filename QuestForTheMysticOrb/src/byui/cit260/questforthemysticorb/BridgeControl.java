@@ -9,18 +9,19 @@ package byui.cit260.questforthemysticorb;
  *
  * @author Mikel
  */
-public class KitchenControl {
-    public static (getKnife) {
-        boolean getKnife;
-            if (getKnife = true)
+public class BridgeControl {
+    
+   public static (hasGauntlets) {
+        boolean hasGauntlets;
+            if (hasGauntlets = true)
                 return true;
            
         return null;
     }
-    private static class getKnife {
-
-        public getKnife() {
+   public canPass {
+    if(hasGauntlets = true)
+        return true;
         }
-    }
     
 }
+

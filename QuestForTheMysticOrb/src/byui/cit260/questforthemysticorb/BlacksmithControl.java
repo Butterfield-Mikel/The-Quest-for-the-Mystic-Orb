@@ -5,22 +5,23 @@
  */
 package byui.cit260.questforthemysticorb;
 
+import model.Gauntlets;
+
 /**
  *
  * @author Mikel
  */
-public class KitchenControl {
-    public static (getKnife) {
-        boolean getKnife;
-            if (getKnife = true)
-                return true;
-           
+public class BlacksmithControl {
+    public static (getGauntlets) {
+        if (getGauntlets = ture)
+            return Gauntlets;
         return null;
     }
-    private static class getKnife {
 
-        public getKnife() {
+    private static class getGauntlets {
+
+        public getGauntlets() {
         }
     }
-    
+            
 }
