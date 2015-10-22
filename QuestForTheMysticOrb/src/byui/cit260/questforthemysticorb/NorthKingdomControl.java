@@ -9,6 +9,6 @@ package byui.cit260.questforthemysticorb;
  *
  * @author Rich
  */
-public class MovementControl {
+public class NorthKingdomControl {
     
 }
