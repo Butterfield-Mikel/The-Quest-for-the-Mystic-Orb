@@ -13,7 +13,7 @@ import model.Gauntlets;
  */
 public class BlacksmithControl {
     public static (getGauntlets) {
-        if (getGauntlets = ture)
+        if (getGauntlets = true)
             return Gauntlets;
         return null;
     }
