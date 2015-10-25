@@ -21,10 +21,10 @@ public class GallowsControl {
            
         return null;
     }
-private static class getTorch {
+        private static class getTorch {
 
-    public getTorch() {
-    }
-}
+            public getTorch() {
+            }
+        }
     
 }
