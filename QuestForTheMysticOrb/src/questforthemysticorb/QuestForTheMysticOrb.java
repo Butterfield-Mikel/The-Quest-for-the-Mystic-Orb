@@ -9,6 +9,7 @@ import model.Bucket;
 import model.EnchantedApple;
 import model.Location;
 import model.Player;
+import view.MainMenuView;
 import view.WelcomeView;
 
 /**
@@ -30,6 +31,15 @@ public class QuestForTheMysticOrb {
         player.setName(welcomeView.getPlayerName());
         
         welcomeView.displayPlayerNameBanner(player); 
+        
+        
+        //mainMenuView
+        MainMenuView mainView = new MainMenuView();
+        
+        char in = mainView.getInput();
+        
+        System.out.println("You entered " + in);
+        
         
     }
     

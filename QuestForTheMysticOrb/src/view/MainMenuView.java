@@ -39,14 +39,14 @@ public class MainMenuView {
             if(input.length() < 1) {
                 System.out.println("please select an option");
                 displayMenu();
-            }
+            } else {
             
             rtn = input.toUpperCase().charAt(0);
             
-            if (rtn != 'N' || rtn != 'L' || rtn != 'H' || rtn != 'E') {
+            if (rtn != 'N' && rtn != 'L' && rtn != 'H' && rtn != 'E') {
                 System.out.println("Please select a valid input.");
                 input = "";
-                
+            }
             }
             
         }
