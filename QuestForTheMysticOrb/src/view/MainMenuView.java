@@ -54,6 +54,13 @@ public class MainMenuView {
     }
     public void doAction(char input) {
         
+        switch(input) {
+            case 'N' :
+                startNewGame
+                
+        }
+        
+        
     }
     
 }
