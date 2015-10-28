@@ -7,7 +7,6 @@ package view;
 
 import java.util.Scanner;
 import model.Player;
-import sun.audio.AudioPlayer;
 
 /**
  *
@@ -28,17 +27,24 @@ public class WelcomeView {
         Scanner in = new Scanner(System.in);
         String name = "";
                 
+    while (name.length() < 2) {
+        
         System.out.println("what is your name?");
         
         name = in.nextLine();
+        
+        if(name.length() < 2) {
+            System.out.println("Please put a longer name.");
+        }
+    }
         
         return name;
         
     }
     
     public void displayPlayerNameBanner(Player p) {
-           System.out.println("welcome" + p.getName() + ":");
-           System.out.println("have fun playing");
+           System.out.println("Welcome " + p.getName() + ":");
+           System.out.println("Have fun playing!");
     }
 
 

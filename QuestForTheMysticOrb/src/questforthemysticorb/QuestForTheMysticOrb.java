@@ -9,7 +9,6 @@ import model.Bucket;
 import model.EnchantedApple;
 import model.Location;
 import model.Player;
-import static sun.audio.AudioPlayer.player;
 import view.WelcomeView;
 
 /**
@@ -23,12 +22,12 @@ public class QuestForTheMysticOrb {
      */
     public static void main(String[] args) {
         
-        Player mainCharacter = new Player();
+        Player player = new Player();
         
         WelcomeView welcomeView = new WelcomeView();
         welcomeView.displayBanner();
         
-        mainCharacter.setName(welcomeView.getPlayerName());
+        player.setName(welcomeView.getPlayerName());
         
         welcomeView.displayPlayerNameBanner(player); 
         

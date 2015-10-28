@@ -9,6 +9,7 @@ import model.EnchantedApple;
  *
  * @author Rich
  */
+
 public class WestlandWoodsControl {
        public static (ateEnchantedApple) {
         boolean ateEnchantedApple;
