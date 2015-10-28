@@ -27,9 +27,9 @@ public class QuestForTheMysticOrb {
         WelcomeView welcomeView = new WelcomeView();
         welcomeView.displayBanner();
         
-        player.setName(welcomeView.getPlayerName());
+       player.setName(welcomeView.getPlayerName());
         
-        welcomeView.displayPlayerNameBanner(player); 
+       welcomeView.displayPlayerNameBanner(player); 
         
         
         
