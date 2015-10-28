@@ -9,6 +9,8 @@ import model.Bucket;
 import model.EnchantedApple;
 import model.Location;
 import model.Player;
+import static sun.audio.AudioPlayer.player;
+import view.WelcomeView;
 
 /**
  *
@@ -21,12 +23,18 @@ public class QuestForTheMysticOrb {
      */
     public static void main(String[] args) {
         
+        Player mainCharacter = new Player();
         
-        ////////////////////////////////////////////////////////////////////////////////////////////////
-        // Here I am trying to print the contents an instance of each class that I implemented. 
-        // However, I'm not 100% sure what that means, and I hope this works. - Mikel
-        ////////////////////////////////////////////////////////////////////////////////////////////////
+        WelcomeView welcomeView = new WelcomeView();
+        welcomeView.displayBanner();
         
+        mainCharacter.setName(welcomeView.getPlayerName());
+        
+        welcomeView.displayPlayerNameBanner(player); 
+        
+        
+        
+       /* 
         Player playerOne = new Player();
         Bucket newBucket = new Bucket();
         Location currentLocation = new Location();
@@ -37,7 +45,7 @@ public class QuestForTheMysticOrb {
         System.out.println(Location.class);
         System.out.println(Bucket.class);
         System.out.println(EnchantedApple.class);
-        
+        */
         ////////////////////////////////////////////////////////////////////////////////////////////////
         
     }
