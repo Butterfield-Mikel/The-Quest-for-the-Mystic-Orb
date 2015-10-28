@@ -56,11 +56,39 @@ public class MainMenuView {
         
         switch(input) {
             case 'N' :
-                startNewGame
+                startNewGame();
+                break;
+            case 'L' :
+                loadGame();
+                break;
+            case 'H' :
+                showHelpMenu();
+                break;
+            case 'E' : 
+                exitGame();
+                break;
+            default:
+                System.out.println("ERROR ON INPUT");
                 
         }
         
         
+    }
+
+    private void startNewGame() {
+        System.out.println("NOT IMPLEMENTED YET");
+    }
+
+    private void loadGame() {
+       System.out.println("NOT IMPLEMENTED YET");
+    }
+
+    private void showHelpMenu() {
+        System.out.println("NOT IMPLEMENTED YET");
+    }
+
+    private void exitGame() {
+        System.out.println("NOT IMPLEMENTED YET");
     }
     
 }
