@@ -31,22 +31,6 @@ public class QuestForTheMysticOrb {
         
         welcomeView.displayPlayerNameBanner(player); 
         
-        
-        
-       /* 
-        Player playerOne = new Player();
-        Bucket newBucket = new Bucket();
-        Location currentLocation = new Location();
-        EnchantedApple newApple = new EnchantedApple(); 
-        
-        System.out.println("This works");
-        System.out.println(Player.class);
-        System.out.println(Location.class);
-        System.out.println(Bucket.class);
-        System.out.println(EnchantedApple.class);
-        */
-        ////////////////////////////////////////////////////////////////////////////////////////////////
-        
     }
     
 }
