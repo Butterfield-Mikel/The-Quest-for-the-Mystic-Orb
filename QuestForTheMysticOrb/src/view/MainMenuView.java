@@ -19,12 +19,13 @@ public class MainMenuView {
     
     public void displayMenu() {
         
-        
-        System.out.println("Select an option:");
-        System.out.println("N - start new game");
-        System.out.println("L - load saved game");
-        System.out.println("M - view help menu");
-        System.out.println("E - exit game");
+        System.out.println("+---------------------+");
+        System.out.println("| Select an option:   |");
+        System.out.println("| N - start new game  |");
+        System.out.println("| L - load saved game |");
+        System.out.println("| M - view help menu  |");
+        System.out.println("| E - exit game       |");
+        System.out.println("+---------------------+");
        
     
     }

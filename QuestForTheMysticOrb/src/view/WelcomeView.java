@@ -19,7 +19,9 @@ public class WelcomeView {
     }
     public void displayBanner() {
         
-        System.out.println("********************************");
+        System.out.println("***************************************");
+        System.out.println("Welcome to the Quest for the Mystic Orb");
+        System.out.println("***************************************");
         
     }
     
@@ -29,7 +31,9 @@ public class WelcomeView {
                 
     while (name.length() < 2) {
         
-        System.out.println("what is your name?");
+        
+        System.out.println("Please enter your name: ");
+        
         
         name = in.nextLine();
         
