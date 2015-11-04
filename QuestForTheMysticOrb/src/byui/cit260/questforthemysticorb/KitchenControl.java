@@ -10,6 +10,7 @@ package byui.cit260.questforthemysticorb;
  * @author Mikel
  */
 public class KitchenControl {
+    /*
     public static (getKnife) {
         boolean getKnife;
             if (getKnife = true)
@@ -22,5 +23,5 @@ public class KitchenControl {
         public getKnife() {
         }
     }
-    
+    */
 }

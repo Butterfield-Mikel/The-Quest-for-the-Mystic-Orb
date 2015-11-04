@@ -18,11 +18,14 @@ public class MainMenuView {
     }
     
     public void displayMenu() {
+        
+        
         System.out.println("Select an option:");
         System.out.println("N - start new game");
         System.out.println("L - load saved game");
         System.out.println("M - view help menu");
         System.out.println("E - exit game");
+       
     
     }
     public char getInput() {
@@ -62,7 +65,7 @@ public class MainMenuView {
                 loadGame();
                 break;
             case 'H' :
-                showHelpMenu();
+                System.out.println("does this show if i type h?");
                 break;
             case 'E' : 
                 exitGame();
@@ -76,7 +79,7 @@ public class MainMenuView {
     }
 
     private void startNewGame() {
-        System.out.println("NOT IMPLEMENTED YET");
+        System.out.println("you selected start game");
     }
 
     private void loadGame() {
@@ -84,7 +87,8 @@ public class MainMenuView {
     }
 
     private void showHelpMenu() {
-        System.out.println("NOT IMPLEMENTED YET");
+        System.out.println("does this print if i type h?");
+        //HelpMenuView helpMenuView = new HelpMenuView;
     }
 
     private void exitGame() {

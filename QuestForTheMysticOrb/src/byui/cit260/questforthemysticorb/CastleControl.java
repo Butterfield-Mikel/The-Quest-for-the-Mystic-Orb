@@ -15,7 +15,7 @@ import model.Player;
  * @author Mikel
  */
 public class CastleControl {
-    
+    /*
     public static getBucket (Bucket b, Item i) {
         boolean getBucket;
         
@@ -30,5 +30,5 @@ public class CastleControl {
         if(MysticOrb = true)
             return true;
     }
-    
+    */
 }

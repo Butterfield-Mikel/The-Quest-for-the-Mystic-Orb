@@ -11,6 +11,8 @@ import model.EnchantedApple;
  */
 
 public class WestlandWoodsControl {
+    
+    /*
        public static (ateEnchantedApple) {
         boolean ateEnchantedApple;
             if (ateEnchantedApple = true)
@@ -22,4 +24,5 @@ public class WestlandWoodsControl {
     if(ateEnchantedApple = true)
         return true;
         }
+    */
 }

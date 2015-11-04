@@ -11,7 +11,9 @@ import model.Gauntlets;
  *
  * @author Mikel
  */
+
 public class BlacksmithControl {
+/*
     public static (getGauntlets) {
         if (getGauntlets = ture)
             return Gauntlets;
@@ -23,5 +25,5 @@ public class BlacksmithControl {
         public getGauntlets() {
         }
     }
-            
+        */   
 }

@@ -13,6 +13,8 @@ import model.Item;
  * @author Rich
  */
 public class GallowsControl {
+    
+    /*
     public static boolean getTorch;
     public static (getTorch){
         if (getTorch = true)
@@ -26,5 +28,5 @@ public class GallowsControl {
             public getTorch() {
             }
         }
-    
+    */
 }

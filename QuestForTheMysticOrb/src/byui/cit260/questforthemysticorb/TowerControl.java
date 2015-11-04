@@ -10,7 +10,7 @@ package byui.cit260.questforthemysticorb;
  * @author Mikel
  */
 public class TowerControl {
-    
+    /*
     public static (getMap) {
         boolean getMap;
             if (getMap = true)
@@ -23,5 +23,5 @@ public class TowerControl {
         public getMap() {
         }
     }
-    
+    */
 }

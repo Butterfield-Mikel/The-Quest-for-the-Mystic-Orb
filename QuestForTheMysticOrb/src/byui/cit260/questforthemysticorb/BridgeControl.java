@@ -10,7 +10,7 @@ package byui.cit260.questforthemysticorb;
  * @author Mikel
  */
 public class BridgeControl {
-    
+   /* 
    public static (hasGauntlets) {
         boolean hasGauntlets;
             if (hasGauntlets = true)
@@ -22,6 +22,6 @@ public class BridgeControl {
     if(hasGauntlets = true)
         return true;
         }
-    
+    */
 }
 

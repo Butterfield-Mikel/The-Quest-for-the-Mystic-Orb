@@ -10,6 +10,8 @@ import model.Bucket;
  * @author Rich
  */
 public class EnchantedGardenControl {
+    
+    /*
     public static growGarden(Bucket){
         boolean Bucketfull;
             if (Bucketfull = true)
@@ -23,5 +25,5 @@ public class EnchantedGardenControl {
             if (growGarden = true)
                 return true;
     }
-        
+      */  
 }

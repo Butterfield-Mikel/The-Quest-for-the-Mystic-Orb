@@ -10,6 +10,7 @@ package byui.cit260.questforthemysticorb;
  * @author Mikel
  */
 public class ShipControl {
+    /*
     public getOnShip {
         boolean getOnShip;
             if(getOnShip = true)
@@ -22,4 +23,5 @@ public class ShipControl {
         public getOnShip() {
         }
     }
+    */
 }
