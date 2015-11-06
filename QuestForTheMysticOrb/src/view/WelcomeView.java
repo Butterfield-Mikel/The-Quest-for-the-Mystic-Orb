@@ -21,6 +21,10 @@ public class WelcomeView {
         
         System.out.println("***************************************");
         System.out.println("Welcome to the Quest for the Mystic Orb");
+        System.out.println("This game will play as a text-based roleplaying game");
+        System.out.println("where you navigate from the castle, through the kingdom,");
+        System.out.println("and out into the uncharted lands outside the kingdom.");
+        System.out.println("You will face challegnes, collect items, and get lost a few times");
         System.out.println("***************************************");
         
     }
@@ -47,7 +51,11 @@ public class WelcomeView {
     }
     
     public void displayPlayerNameBanner(Player p) {
-           System.out.println("Welcome " + p.getName() + ":");
+           System.out.println("Welcome " + p.getName() + ", King Simon has summoned you, the head knight of the round table,");
+           System.out.println("because a dark wizard has cursed the kingdom with a famine");
+           System.out.println("The only way to restore the kingdom to its prosperous state is to");
+           System.out.println("go on a dangerous quest to the deep Westland Woods where");
+           System.out.println("you can find the Mystic Orb of Rejuvenation.");
            System.out.println("Have fun playing!");
     }
 
