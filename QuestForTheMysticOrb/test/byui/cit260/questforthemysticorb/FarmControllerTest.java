@@ -23,10 +23,10 @@ public class FarmControllerTest {
     @Test
     public void testFarmSize() {
         System.out.println("farmSize");
-        String widthOfFarm = "3";
-        String lengthOfFarm = "3";
+        String widthOfFarm = "3";  // <<-- this one
+        String lengthOfFarm = "3"; //<<-- times this one
         FarmController instance = new FarmController();
-        int expResult = 9;
+        int expResult = 9;// <<-- should equal this one..
         int result = instance.farmSize(widthOfFarm, lengthOfFarm);
         assertEquals(expResult, result);
         
