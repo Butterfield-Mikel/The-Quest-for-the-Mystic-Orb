@@ -9,6 +9,7 @@ import model.Bucket;
 import model.EnchantedApple;
 import model.Location;
 import model.Player;
+import view.GallowsView;
 import view.MainMenuView;
 import view.WelcomeView;
 
@@ -34,11 +35,19 @@ public class QuestForTheMysticOrb {
         
         
         //mainMenuView
-        MainMenuView mainView = new MainMenuView();
+        //MainMenuView mainView = new MainMenuView();
         
-        char in = mainView.getInput();
+        //char in = mainView.getInput();
         
-        System.out.println("You entered " + in);
+        //System.out.println("You entered " + in);
+        
+        //GallowsView
+        GallowsView gallowsView = new GallowsView();
+        
+        char in = gallowsView.getInput();
+        
+        
+        
         
         
     }
