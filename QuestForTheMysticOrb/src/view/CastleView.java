@@ -12,17 +12,17 @@ import java.util.Scanner;
  * @author Rich
  */
 public class CastleView {
-    
+        public boolean hasMap=false; 
     public CastleView(){
         
     }
     
     public void displayCastle() {
-        System.out.println("You find yourself in the Castle. The King has requested that you personally embark on an epic quest to find the Mystic Orb and save the Kingdom.");
-        System.out.println("Looking around the room, you see a (B)UCKET on the floor. It might come in handy, you never know. Or you might be stuck awkwardly carrying a bucket around the whole game, your call.");
-        System.out.println("Obvious exits from here are the (T)OWER, (D)UNGEON, (K)ITCHEN, and (N)ORTH KINGDOM. I typed them in all caps to let you know they are important.");
-        System.out.println("********************************");
-        System.out.println("What would you like to do (enter the first letter)?");
+        System.out.println("\nYou find yourself in the Castle. The King has requested that you personally embark on an epic quest to find the Mystic Orb and save the Kingdom.");
+        System.out.println("\tLooking around the room, you see a (B)UCKET on the floor. It might come in handy, you never know. Or you might be stuck awkwardly carrying a bucket around the whole game, your call.");
+        System.out.println("\tObvious exits from here are the (T)OWER, (D)UNGEON, (K)ITCHEN, and (N)ORTH KINGDOM. I typed them in all caps to let you know they are important.");
+        System.out.println("\t********************************");
+        System.out.println("What would you like to do (enter the first letter)?\n");
     }
     
     public char getInput() {
@@ -57,20 +57,26 @@ public class CastleView {
         
         switch(input) {
             case 'B' :
-                
+                System.out.println("You pick up the BUCKET. Your life is truly the exciting one.");
                 break;
             case 'D' :
-                
+                System.out.println("You are heading to the Dungeon.");
                 break;
             case 'K' :
-                
-                //System.out.println("does this show if i type h?");
+                System.out.println("You are heading to the Kitchen.");
                 break;
             case 'T' : 
-                
+                System.out.println("You are heading to the Tower.");
                 break;
             case 'N' : 
-                
+                if (hasMap == true) {
+                    System.out.println("You are heading to the Noth Kingdom.");
+                }else {
+                    System.out.println("You really should find a MAP or something before wandering around a whole Kingdom.Maybe if you head to the TOWER and take a look around you can make one. Sorry, no Rand McNally option.");
+                    Scanner in2 = new Scanner(System.in2);
+                    displayCastle();
+                    input = in2.nextLine();
+                }
                 break;
             default:
                 System.out.println("ERROR ON INPUT");
