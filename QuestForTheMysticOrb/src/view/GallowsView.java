@@ -21,6 +21,7 @@ public class GallowsView {
         System.out.println("As you enter the Gallows you feel like you are being watched");
         System.out.println("You see a circle of torches surrounding the Gallows, ");
         System.out.println("you wonder if a touch would be useful as you embark on this quest.");
+        System.out.println("");
         System.out.println("++++++++++++++++++++");
         System.out.println("You have the following choices:");
         System.out.println("T-- Get a torch");
