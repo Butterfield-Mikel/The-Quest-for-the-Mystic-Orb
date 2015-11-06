@@ -47,7 +47,7 @@ public class MainMenuView {
             
             rtn = input.toUpperCase().charAt(0);
             
-            if (rtn != 'N' && rtn != 'L' && rtn != 'H' && rtn != 'E') {
+            if (rtn != 'N' && rtn != 'L' && rtn != 'M' && rtn != 'E') {
                 System.out.println("Please select a valid input.");
                 input = "";
             }
@@ -65,8 +65,9 @@ public class MainMenuView {
             case 'L' :
                 loadGame();
                 break;
-            case 'H' :
-                System.out.println("does this show if i type h?");
+            case 'M' :
+                showHelpMenu();
+                //System.out.println("does this show if i type h?");
                 break;
             case 'E' : 
                 exitGame();
@@ -88,8 +89,8 @@ public class MainMenuView {
     }
 
     private void showHelpMenu() {
-        System.out.println("does this print if i type h?");
-        //HelpMenuView helpMenuView = new HelpMenuView;
+        //System.out.println("does this print if i type h?");
+        HelpMenuView helpMenuView = new HelpMenuView();
     }
 
     private void exitGame() {

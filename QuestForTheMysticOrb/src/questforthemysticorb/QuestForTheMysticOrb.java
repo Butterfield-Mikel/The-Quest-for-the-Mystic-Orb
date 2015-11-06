@@ -12,6 +12,7 @@ import model.Player;
 import view.GallowsView;
 import view.MainMenuView;
 import view.WelcomeView;
+import view.CastleView;
 
 /**
  *
