@@ -10,19 +10,16 @@ package view;
  * @author Mikel
  */
 public class MapView {
-   
+
     public static void mapView() {
-    
+//while loop here to see the map
         int countDown = 3;
-        while(countDown < 1) {
-            
-            System.out.println("You can see the map in 3 seconds.");
+        while (countDown < 1) {
+            System.out.println("You can see the map in " + countDown + ".");
             System.out.println(countDown);
             countDown--;
         }
-        
-  {
-        
+
         System.out.println("+---+---+---+---+---+---+---+---+");
         System.out.println("|---+---+---+TWR+---+---+---+---|");
         System.out.println("|---+---+KCN+CST+DNG+---+---+---|");
@@ -35,15 +32,23 @@ public class MapView {
         System.out.println("|---+---+PIR+SOD+SHK+---+---N---|");
         System.out.println("|---+---+---+---+---+---+-W-+-E-|");
         System.out.println("+---+---+---+---+---+---+---S---+");
+        
+        int keyCount = 1;
+        
+        
+        
+        
+        //do while loop here to see the map key
+        do {
+
         System.out.println("TWR=Tower KCN=Kitchen CST=Castle DNG=Dungeon GLW=Gallows NKD=North Kingdom");
         System.out.println("SHP=Ship BST=Blacksmith SKD=South Kingdom FRM=Farm WWD=Westland Woods XRD=Crossroads");
         System.out.println("BDG=Bridge GDN=Garden DWD=Deep Westland Woods MAN=Mystic Who Warns GZB=Gazebo");
         System.out.println("CAV=Cave DOC=Docks DCV=Deep Cave SEA=Sea BCH=Beach PIR=Pirates SOD=Ship SHK=Shark");
-    
-        }
-        
-    }
-    
-}
-    
 
+        keyCount++;
+        
+        } while (keyCount < 2);
+    }
+
+}
