@@ -73,9 +73,9 @@ public class CastleView {
                     System.out.println("You are heading to the Noth Kingdom.");
                 }else {
                     System.out.println("You really should find a MAP or something before wandering around a whole Kingdom.Maybe if you head to the TOWER and take a look around you can make one. Sorry, no Rand McNally option.");
-                    Scanner in2 = new Scanner(System.in2);
-                    displayCastle();
-                    input = in2.nextLine();
+                    //Scanner in2 = new Scanner(System.in2);
+                   // displayCastle();
+                   // input = in2.nextLine();
                 }
                 break;
             default:
