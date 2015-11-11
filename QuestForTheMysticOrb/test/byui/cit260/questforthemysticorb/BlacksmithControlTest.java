@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.questforthemysticorb;
+/*package byui.cit260.questforthemysticorb;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
  *
  * @author Mikel
  */
-public class BlacksmithControlTest {
+/*public class BlacksmithControlTest {
     
     public BlacksmithControlTest() {
     }
@@ -21,7 +21,7 @@ public class BlacksmithControlTest {
      * Test of <error> method, of class BlacksmithControl.
      */
     @Test
-    public void test<error>() {
+    /*public void test<error>() {
         System.out.println("<error>");
         BlacksmithControl.getGauntlets = null;
         BlacksmithControl.<error>(<error>);
@@ -30,3 +30,4 @@ public class BlacksmithControlTest {
     }
     
 }
+*/
