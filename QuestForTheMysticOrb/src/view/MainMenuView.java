@@ -12,52 +12,25 @@ import view.CastleView;
  *
  * @author Mikel
  */
-public class MainMenuView {
+public class MainMenuView extends View{
     
     public MainMenuView() {
-        
+        super("+---------------------+\n *"
+                + "| Select an option:   |\n"
+                + "| N - start new game  |\n"
+                + "| L - load saved game |\n"
+                + "| M - view help menu  |\n"
+                + "| E - exit game       |\n"
+                + "+---------------------+");
     }
     
-    public void displayMenu() {
-        
-        System.out.println("+---------------------+");
-        System.out.println("| Select an option:   |");
-        System.out.println("| N - start new game  |");
-        System.out.println("| L - load saved game |");
-        System.out.println("| M - view help menu  |");
-        System.out.println("| E - exit game       |");
-        System.out.println("+---------------------+");
-       
-    
-    }
-    public char getInput() {
-        
-        Scanner in = new Scanner(System.in);
-        
-        String input = "";
-        char rtn = 0;
-        
-        while(input.length() < 1) {
-            displayMenu();
-            input = in.nextLine();
-            
-            if(input.length() < 1) {
-                System.out.println("please select an option");
-                displayMenu();
-            } else {
-            
-            rtn = input.toUpperCase().charAt(0);
-            
-            if (rtn != 'N' && rtn != 'L' && rtn != 'M' && rtn != 'E') {
-                System.out.println("Please select a valid input.");
-                input = "";
-            }
-            }
-            
-        }
-        return rtn;
-    }
-    public void doAction(char input) {
+    /**
+     * @param input
+     * 
+     * @return
+     */
+    @Override
+    public boolean doAction(char input) {
         
         switch(input) {
             case 'N' :
@@ -72,13 +45,12 @@ public class MainMenuView {
                 break;
             case 'E' : 
                 exitGame();
-                break;
+                return false;
             default:
                 System.out.println("ERROR ON INPUT");
-                
+                break;
         }
-        
-        
+        return true;
     }
 
     private void startNewGame() {
