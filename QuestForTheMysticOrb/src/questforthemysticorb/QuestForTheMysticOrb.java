@@ -36,16 +36,17 @@ public class QuestForTheMysticOrb {
         
         
         //mainMenuView
-        //MainMenuView mainView = new MainMenuView();
+        MainMenuView mainView = new MainMenuView();
+        mainView.display();
         
-        //char in = mainView.getInput();
+        char in = mainView.getInput();
         
-        //System.out.println("You entered " + in);
+        System.out.println("You entered " + in);
         
         //GallowsView
-        GallowsView gallowsView = new GallowsView();
+        //GallowsView gallowsView = new GallowsView();
         
-        char in = gallowsView.getInput();
+        //char in = gallowsView.getInput();
         
         
         

@@ -15,11 +15,11 @@ import view.CastleView;
 public class MainMenuView extends View{
     
     public MainMenuView() {
-        super("+---------------------+\n *"
+        super("+---------------------+\n"
                 + "| Select an option:   |\n"
                 + "| N - start new game  |\n"
                 + "| L - load saved game |\n"
-                + "| M - view help menu  |\n"
+                + "| H - view help menu  |\n"
                 + "| E - exit game       |\n"
                 + "+---------------------+");
     }
@@ -39,12 +39,11 @@ public class MainMenuView extends View{
             case 'L' :
                 loadGame();
                 break;
-            case 'M' :
+            case 'H' :
                 showHelpMenu();
                 //System.out.println("does this show if i type h?");
                 break;
             case 'E' : 
-                exitGame();
                 return false;
             default:
                 System.out.println("ERROR ON INPUT");
@@ -64,10 +63,7 @@ public class MainMenuView extends View{
     private void showHelpMenu() {
         //System.out.println("does this print if i type h?");
         HelpMenuView helpMenuView = new HelpMenuView();
-    }
-
-    private void exitGame() {
-        System.out.println("NOT IMPLEMENTED YET");
+        char in = helpMenuView.getInput();
     }
     
 }

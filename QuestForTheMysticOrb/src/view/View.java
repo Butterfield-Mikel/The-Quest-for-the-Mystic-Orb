@@ -21,11 +21,11 @@ public abstract class View implements ViewInterface {
 
     @Override
     public void display() {
-        boolean cont = true;
+        boolean cont;
         do {
             System.out.println(menu);
             char in = getInput();
-            doAction(in);
+            cont = doAction(in);
         } while (cont);
 
     }
@@ -38,20 +38,20 @@ public abstract class View implements ViewInterface {
         char rtn = 0;
         
         while(input.length() < 1) {
-            display();
+            
             input = in.nextLine();
             
             if(input.length() < 1) {
                 System.out.println("please select an option");
-                display();
-            } else {
+                
+            } 
+            else {
+                rtn = input.toUpperCase().charAt(0);
             
-            rtn = input.toUpperCase().charAt(0);
-            
-            if (rtn != 'N' && rtn != 'L' && rtn != 'M' && rtn != 'E') {
+            /*if (rtn != 'N' && rtn != 'L' && rtn != 'M' && rtn != 'E') {
                 System.out.println("Please select a valid input.");
                 input = "";
-            }
+            }*/
             }
             
         }

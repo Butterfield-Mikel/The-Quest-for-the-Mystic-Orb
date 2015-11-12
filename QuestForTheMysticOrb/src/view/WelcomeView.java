@@ -52,7 +52,7 @@ public class WelcomeView {
     
     public void displayPlayerNameBanner(Player p) {
            System.out.println("Welcome " + p.getName() + ", King Simon has summoned you, the head knight of the round table,");
-           System.out.println("because a dark wizard has cursed the kingdom with a famine");
+           System.out.println("because a dark wizard has cursed the kingdom with a famine.");
            System.out.println("The only way to restore the kingdom to its prosperous state is to");
            System.out.println("go on a dangerous quest to the deep Westland Woods where");
            System.out.println("you can find the Mystic Orb of Rejuvenation.");
