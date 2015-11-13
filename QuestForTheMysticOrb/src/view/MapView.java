@@ -67,7 +67,7 @@ public class MapView {
         HelpMenuView helpMenuView = new HelpMenuView();
         char in = helpMenuView.getInput();
     }
-
+// this is just here because NetBeans is mad at me if it't not. 
     char getInput() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
