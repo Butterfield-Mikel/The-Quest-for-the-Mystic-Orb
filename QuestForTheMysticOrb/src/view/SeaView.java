@@ -7,15 +7,15 @@ package view;
 
 /**
  *
- * @author Rich
+ * @author Mikel
  */
-public class EnchantedGardenView extends View {
+public class SeaView {
     
-    public EnchantedGardenView() {
+       public SeaView() {
         super("You start to smell the crisp relaxing air of the sea, as you n/"
                 + "start to relax you remember that you have a kingdom to n/"
                 + "save. In the distance you see a great sea. You see a  n/"
-                + "(S)hip with nobody on it, a (B)each, and some (D)ocks. n/");
+                + "(S)hip with nobody on it, a (B)each, and some (D)ocks.");
     }
     
         /**
@@ -41,13 +41,21 @@ public class EnchantedGardenView extends View {
         }
         return true;
     }
-        private void showGallows() {
-        GallowsView showGallows = new GallowsView();
-        char in = showGallows.getInput();
+    
+        private void showBeach() {
+        BeachView showBeach = new BeachView();
+        char in = showBeach.getInput();
+        }
+            
+        private void showShip() {
+        ShipView showShip = new ShipView();
+        char in = showShip.getInput();
         }
         
-        private void showBridge() {
-        BridgeView showBridge = new BridgeView();
-        char in = showBridge.getInput();
+        private void showDocks() {
+        DocksView showDocks = new DocksView();
+        char in = showDocks.getInput();
         }
+        
+        
 }
