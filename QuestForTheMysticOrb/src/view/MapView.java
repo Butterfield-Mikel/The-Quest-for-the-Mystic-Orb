@@ -9,69 +9,69 @@ package view;
  *
  * @author Mikel
  */
-public class MapView {
-
-    public static void mapView() {
-//while loop here to see the map
-        int countDown = 3;
+public class MapView extends View {
+    
+    
+     public MapView() {
+/*
+   int countDown = 3;
         while (countDown < 1) {
             System.out.println("Loading map " + countDown + ".");
             System.out.println(countDown);
             countDown--;
         }
+         */
+    
 
-        System.out.println("+---+---+---+---+---+---+---+---+");
-        System.out.println("|---+---+---+TWR+---+---+---+---|");
-        System.out.println("|---+---+KCN+CST+DNG+---+---+---|");
-        System.out.println("|---+---+GLW+NKD+SHP+---+---+---|");
-        System.out.println("|---+---+BST+SKD+FRM+---+---+---|");
-        System.out.println("|---+---+WWD+XRD+BDG+GDN+---+---|");
-        System.out.println("|---+---+DWD+MAN+---+GZB+---+---|");
-        System.out.println("|---+---+CAV+DOC+---+---+---+---|");
-        System.out.println("|---+---+DCV+SEA+BCH+---+---+---|");
-        System.out.println("|---+---+PIR+SOD+SHK+---+---N---|");
-        System.out.println("|---+---+---+---+---+---+-W-+-E-|");
-        System.out.println("+---+---+---+---+---+---+---S---+");
+    super("+---+---+---+---+---+---+---+---+ /n"
+        + "|---+---+---+TWR+---+---+---+---| /n"
+        + "|---+---+KCN+CST+DNG+---+---+---| /n"
+        + "|---+---+GLW+NKD+SHP+---+---+---| /n"
+        + "|---+---+BST+SKD+FRM+---+---+---| /n"
+        + "|---+---+WWD+XRD+BDG+GDN+---+---| /n"
+        + "|---+---+DWD+MAN+---+GZB+---+---| /n"
+        + "|---+---+CAV+DOC+---+---+---+---| /n"
+        + "|---+---+DCV+SEA+BCH+---+---+---| /n"
+        + "|---+---+PIR+SOD+SHK+---+---N---| /n"
+        + "|---+---+---+---+---+---+-W-+-E-| /n"
+        + "+---+---+---+---+---+---+---S---+ /n");
 
         int keyCount = 1;
 
-        //do while loop here to see the map key
+     
         do {
 
             System.out.println("TWR=Tower KCN=Kitchen CST=Castle DNG=Dungeon GLW=Gallows NKD=North Kingdom");
             System.out.println("SHP=Ship BST=Blacksmith SKD=South Kingdom FRM=Farm WWD=Westland Woods XRD=Crossroads");
             System.out.println("BDG=Bridge GDN=Garden DWD=Deep Westland Woods MAN=Mystic Who Warns GZB=Gazebo");
             System.out.println("CAV=Cave DOC=Docks DCV=Deep Cave SEA=Sea BCH=Beach PIR=Pirates SOD=Ship SHK=Shark");
-
+            System.out.println("Press (T) to return to the tower.");
             keyCount++;
 
         } while (keyCount < 2);
     }
 
-    // @Override
+   /**
+     * @param input
+     *
+     * @return
+     */
+    @Override
     public boolean doAction(char input) {
-
         switch (input) {
-
-            case 'H':
-                showHelpMenu();
-                //System.out.println("does this show if i type h?");
+            case 'T':
+               showTower();
+                break;         
+            default:
+                System.out.println("ERROR ON INPUT");
                 break;
-
         }
         return true;
     }
 
-    private void showHelpMenu() {
-        //System.out.println("does this print if i type h?");
-        HelpMenuView helpMenuView = new HelpMenuView();
-        char in = helpMenuView.getInput();
+    private void showTower() {
+        TowerView showTower = new TowerView();
+        char in = showTower.getInput();
     }
-// this is just here because NetBeans is mad at me if it't not. 
-    char getInput() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-   
 
 }

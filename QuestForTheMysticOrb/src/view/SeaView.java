@@ -9,7 +9,7 @@ package view;
  *
  * @author Mikel
  */
-public class SeaView {
+public class SeaView extends View {
     
        public SeaView() {
         super("You start to smell the crisp relaxing air of the sea, as you n/"
