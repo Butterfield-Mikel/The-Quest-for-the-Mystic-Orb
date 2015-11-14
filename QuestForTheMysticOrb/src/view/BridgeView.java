@@ -17,7 +17,7 @@ public class BridgeView extends View {
                 + "he bridge is covered with a thorn bush. You could try n/"
                 + "to (M)ove the bush, but it looks like you might need n/"
                 + "something to help you. You can always turn back n/"
-                + "And go to the (C)rossroads or head down to the (B)each.");
+                + "And go to the (C)rossroads or head down to the (R)iver.");
     }
 
     /**
@@ -34,8 +34,8 @@ public class BridgeView extends View {
                         + "Too bad, I bet whatever is on the other side of this bridge is awesome.");
                 //} else { showEnchantedGardenView(); }
                 break;
-            case 'B':
-                showBeach();
+            case 'R':
+                showRiver();
                 break;
             case 'C':
                 showCrossroads();
@@ -52,15 +52,14 @@ public class BridgeView extends View {
         char in = showCrossroads.getInput();
     }
 
-    private void showBeach() {
-        BeachView showBeach = new BeachView();
-        char in = showBeach.getInput();
+    private void showRiver() {
+        RiverView showRiver = new RiverView();
+        char in = showRiver.getInput();
     }
 
-    /*
      private void showEnchantedGarden() {
      EnchantedGardenView showEnchantedGarden = new EnchantedGardenView();
      char in = showEnchantedGarden.getInput();
      }
-     */
+     
 }

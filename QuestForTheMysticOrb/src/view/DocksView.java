@@ -13,14 +13,12 @@ public class DocksView extends View {
     
     public DocksView() {
         super("You keep walking until you get to the end of the dock. n/"
-                + "There is a (S)hip here that can take you away from the kingdom n/"
-                + ", away from all your problems and fears. This is your chance n/"
-                + "for a new life out in the open sea! Do it man, you know that n/"
-                + "you want to. n/"
+                + "There is a great (S)ea out there to go exploring about in, "
+                + "if that is the sort of thing you are into. n/"
                 + " n/"
                 + "Then again, if you did bother to bring that bucket with you, n/"
-                + "there is (W)ater and you could fill it with water. You better n/"
-                + "find a use for t quick though, if you thought carrying an empty n/"
+                + "there is (W)ater here so you could fill it with water. You better n/"
+                + "find a use for it quick though, if you thought carrying an empty n/"
                 + "bucket made you look stupid, a bucket of water might get you n/"
                 + "sent to the loony bin. n/"
                 + " n/"
@@ -36,7 +34,7 @@ public class DocksView extends View {
     public boolean doAction(char input) {
         switch(input) {
             case 'S' :
-                showShip();
+                showSea();
                 break;
             case 'C' :
                 showCrossroads();
@@ -57,8 +55,8 @@ public class DocksView extends View {
         char in = showCrossroads.getInput();
         }
             
-        private void showShip() {
-        ShipView showShip = new ShipView();
-        char in = showShip.getInput();
+        private void showSea() {
+        SeaView showSea = new SeaView();
+        char in = showSea.getInput();
         }
 }
