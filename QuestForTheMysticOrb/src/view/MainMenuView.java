@@ -53,7 +53,12 @@ public class MainMenuView extends View{
     }
 
     private void startNewGame() {
-        System.out.println("you selected start game");
+        // this should create a new game.
+        GameControl.createNewGame(QuestForTheMysticOrb.getPlayer());
+        
+        // and display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 
     private void loadGame() {
