@@ -52,7 +52,7 @@ public class TowerControl {
     };
 
  //this calculates the numer of locations so the player knows how many places he or she can visit
-    int i = locations.length;
+    public int i = locations.length;
    
 
 // and something like this will have to go in the view layer

@@ -10,13 +10,44 @@ package view;
  * @author Mikel
  */
 public class TowerView extends View {
+    
+    
+     String[] locations = {
+        "Beach",
+        "Blacksmith",
+        "Bridge",
+        "Castle",
+        "Cave",
+        "Crossroads",
+        "Deep Westland Woods",
+        "Docks",
+        "Dungeon",
+        "Enchanted Garden",
+        "Farm",
+        "Gallows",
+        "Gazebo",
+        "Kitchen",
+        "North Kingdom",
+        "River",
+        "Sea",
+        "Ship",
+        "Shoppe",
+        "South Kingdom",
+        "Tower",
+        "Westland Woods"
+    };
+    
+    
+    
+    
 
     public TowerView() {
         super("You enter the tallest tower in the kingdom. Even if n/"
                 + "you don’t find anything useful up here you still  n/"
-                + "needed the exercise. In the tower you can look /n"
+                + "needed the exercise. In the tower you can look n/"
                 + "out at the entire kingdom and the land surrounding  n/"
-                + "It. There is a (M)ap on the table. You don’t see anything /n"
+                + "It. You can (L)ook around and count the locations. n/"
+                + "There is a (M)ap on the table. You don’t see anything n/"
                 + "Else so you can go back (D)ownstairs to the main castle. ");
     }
 
@@ -33,6 +64,12 @@ public class TowerView extends View {
                 break;
              case 'D':
                 showCastle();
+                break;
+                 case 'L':
+        {
+            int i = locations.length;
+            System.out.println("You see " + i + " locations.");
+        }
                 break;
             default:
                 System.out.println("ERROR ON INPUT");

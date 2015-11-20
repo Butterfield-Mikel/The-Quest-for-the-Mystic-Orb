@@ -20,7 +20,7 @@ public class TowerControlTest {
     @Test
     public void testSomeMethod() {
         // If the length of the array is correct below this should pass. 
-        int expResult = 22;
+        int i = 22;
     }
     
 }
