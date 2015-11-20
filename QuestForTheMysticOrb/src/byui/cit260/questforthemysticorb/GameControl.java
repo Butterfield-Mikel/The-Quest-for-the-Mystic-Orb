@@ -5,13 +5,22 @@
  */
 package byui.cit260.questforthemysticorb;
 
+import model.Bucket;
+import model.Corn;
+import model.Game;
+import model.Map;
+import model.MysticOrb;
+import model.Player;
+import model.Torch;
+import questforthemysticorb.QuestForTheMysticOrb;
+
 /**
  *
  * @author Rich
  */
 public class GameControl {
 
-    public static void createNewGame(Player player) {
+ /*   public static void createNewGame(Player player) {
 
         Game game = new Game();
         QuestForTheMysticOrb.setCurrentGame(game);
@@ -43,5 +52,5 @@ public class GameControl {
         game.setTorch(torch);
         
     }
-
+*/
 }

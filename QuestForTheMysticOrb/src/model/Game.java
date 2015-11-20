@@ -13,7 +13,7 @@ import java.io.Serializable;
  */
 public class Game implements Serializable {
     
-    private InventoryItem[] inventory;
+    private Item[] inventory;
     private Player player;
     private String[] actors;
     private Bucket bucket;
@@ -23,7 +23,7 @@ public class Game implements Serializable {
     private Map map;
     private MysticOrb mysticOrb;
     private Torch torch;
-    
+/*    
     public Game {
     
 }
@@ -33,8 +33,8 @@ public class Game implements Serializable {
     public void setTotalTime(double totalTime) {
         this.totalTime = totalTime;
     }
-    public InventoryItem[] getInventory() {
+    public Item[] getInventory() {
         return inventory;
     }
-    
+    */
 }

@@ -43,8 +43,8 @@ public class SeaView extends View {
     }
     
         private void showBeach() {
-        BeachView showBeach = new BeachView();
-        char in = showBeach.getInput();
+     //   BeachView showBeach = new BeachView();
+     //   char in = showBeach.getInput();
         }
             
         private void showShip() {

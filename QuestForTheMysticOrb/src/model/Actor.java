@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @author Mikel
  */
 public enum Actor implements Serializable {
-
+/*
     Hero("This is the player character, the one who finds the orb and saves the kingdom."),
     King("The king is the king of the kingdom and he sends the play on his or her quest."),
     Blacksmith("He is the finest blacksmith in all the land."),
@@ -35,5 +35,5 @@ public Point getCoordinates() {
 return coordinates;
 }
     
-    
+    */
 }
