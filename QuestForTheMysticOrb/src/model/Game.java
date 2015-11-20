@@ -18,6 +18,21 @@ public class Game implements Serializable {
     private Corn corn;
     private EnchantedApple enchantedApple;
     private Gauntlets gauntlets;
+    private Map map;
+    private MysticOrb mysticOrb;
+    private Torch torch;
     
+    public Game {
+    
+}
+    public double getTotalTime() {
+        return totalTime;
+    }
+    public void setTotalTime(double totalTime) {
+        this.totalTime = totalTime;
+    }
+    public InventoryItem[] getInventory() {
+        return inventory;
+    }
     
 }
