@@ -9,6 +9,17 @@ package view;
  *
  * @author mannj14
  */
-public class RiverView {
+public class RiverView  {
+       
+    public void RiverView(){
+            System.out.println("You jumped in to a river, now you are dead");
+            showMainMenu();
+               
+    }
+    
+    private void showMainMenu() {
+        MainMenuView showMainMenu = new MainMenuView();
+    }
+    
     
 }

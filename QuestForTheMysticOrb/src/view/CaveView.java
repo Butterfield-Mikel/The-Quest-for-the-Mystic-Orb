@@ -39,10 +39,13 @@ public class CaveView extends View {
         return true;
     }
     
-        private void showCastle() {
-        CastleView showCastle = new CastleView();
-        char in = showCastle.getInput();
+        private void showDeepCave() {
+        DeepCaveView showDeepCave = new DeepCaveView();
+       
         }
-    
+        private void showDeepWestlandWoods() {
+        DeepWestlandWoodsView showDeepWeestlandWoods = new DeepWestlandWoodsView();
+       
+        }
     
 }
