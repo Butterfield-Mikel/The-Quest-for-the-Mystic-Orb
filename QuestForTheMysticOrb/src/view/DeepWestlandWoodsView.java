@@ -11,7 +11,7 @@ package view;
  */
 public class DeepWestlandWoodsView extends View {
     
-    public DeepwestlandWoodsView() {
+    public DeepWestlandWoodsView() {
         super("You have entered the Deep Westland Woods, it seems rather dark and scary n/"
         + "As you look deeper into the woods you see what apears to be a wooden box of some kind n/"
         + "you realize that you really only have two choices at this point. /n"
@@ -28,12 +28,6 @@ public class DeepWestlandWoodsView extends View {
             case 'R' :
                 System.out.println("You Chicken");
                 showWestlandWoods();
-                break;
-            case 'L' :
-                System.out.println("Like an idiot you walk into the nearest cell and look n/"
-                        + "around. Your hear the door slam shut behind you and Frank giggles n/"
-                        + "like a school girl. You immediatly regret all the decisions in your n/"
-                        + "life that have brought you to this point.");
                 break;
             default:
                 System.out.println("ERROR ON INPUT");
