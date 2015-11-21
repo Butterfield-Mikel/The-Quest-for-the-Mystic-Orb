@@ -65,11 +65,11 @@ public class TowerView extends View {
              case 'D':
                 showCastle();
                 break;
-                 case 'L':
-        {
-            int i = locations.length;
-            System.out.println("You see " + i + " locations.");
-        }
+                 case 'L':    
+                     
+                     //This should calculate the length of the array. 
+            for (int i = 0; i < locations.length; i++) 
+            System.out.println("You see " + i + " locations.");      
                 break;
             default:
                 System.out.println("ERROR ON INPUT");
