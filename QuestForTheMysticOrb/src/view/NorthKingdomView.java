@@ -47,8 +47,8 @@ public class NorthKingdomView extends View {
     }
     
         private void showShoppe() {
-        ShoppeView showShoppe = new ShoppeView();
-        char in = showShoppe.getInput();
+    //    ShoppeView showShoppe = new ShoppeView();
+    //   char in = showShoppe.getInput();
         }
         
         private void showGallows() {

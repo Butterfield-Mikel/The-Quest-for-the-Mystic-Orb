@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-/*package byui.cit260.questforthemysticorb;
+package byui.cit260.questforthemysticorb;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -12,21 +12,15 @@ import static org.junit.Assert.*;
  *
  * @author Mikel
  */
-/*public class TowerControlTest {
+public class TowerControlTest {
     
     public TowerControlTest() {
     }
 
-    /**
-     * Test of <error> method, of class TowerControl.
-     */
-    /*@Test
-    public void test<error>() {
-        System.out.println("<error>");
-        TowerControl.getMap = true;
-        
-    
+    @Test
+    public void testSomeMethod() {
+        // If the length of the array is correct below this should pass. 
+        int i = 22;
     }
     
 }
-*/

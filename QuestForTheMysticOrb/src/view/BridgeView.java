@@ -48,13 +48,13 @@ public class BridgeView extends View {
     }
 
     private void showCrossroads() {
-        CrossroadsView showCrossroads = new CrossroadsView();
-        char in = showCrossroads.getInput();
+   //     CrossroadsView showCrossroads = new CrossroadsView();
+   //    char in = showCrossroads.getInput();
     }
 
     private void showRiver() {
-        RiverView showRiver = new RiverView();
-        char in = showRiver.getInput();
+    //    RiverView showRiver = new RiverView();
+     //   char in = showRiver.getInput();
     }
 
      private void showEnchantedGarden() {

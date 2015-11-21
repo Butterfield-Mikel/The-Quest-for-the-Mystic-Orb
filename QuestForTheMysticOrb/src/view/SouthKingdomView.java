@@ -61,7 +61,7 @@ public class SouthKingdomView extends View {
         }
         
         private void showCrossroads() {
-        CrossroadsView showCrossroads = new CrossroadsView();
-        char in = showCrossroads.getInput();
+     //   CrossroadsView showCrossroads = new CrossroadsView();
+       // char in = showCrossroads.getInput();
         }
 }

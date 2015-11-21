@@ -42,11 +42,11 @@ public class WestlandWoodsView extends View {
     }
     
         private void showDeepWestlandWoods() {
-        DeepWestlandWoodsView showDeepWestlandWoods = new DeepWestlandWoodsView();
-        char in = showDeepWestlandWoods.getInput();
+      //  DeepWestlandWoodsView showDeepWestlandWoods = new DeepWestlandWoodsView();
+     //   char in = showDeepWestlandWoods.getInput();
     }
         private void showCrossroads() {
-        CrossroadsView showCrossroads = new CrossroadsView();
-        char in = showCrossroads.getInput();
+    //    CrossroadsView showCrossroads = new CrossroadsView();
+    //    char in = showCrossroads.getInput();
         }
 }
