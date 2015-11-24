@@ -5,13 +5,14 @@
  */
 package view;
 
+import java.util.Random;
 
 /**
  *
  * @author Rich
  */
 public class DungeonView extends View {
-    
+    //map[1][2].Dungeon();
     public DungeonView() {
         super("You walk down the stars into Ye Olde Dungeon. (see what I did there?) n/"
         + "Looking around you notice a guard, and four cells. The guard has a big mustaache n/"
@@ -40,6 +41,10 @@ public class DungeonView extends View {
                         + "around. Your hear the door slam shut behind you and Frank giggles n/"
                         + "like a school girl. You immediatly regret all the decisions in your n/"
                         + "life that have brought you to this point.");
+                System.out.println("*********************************************************************n/"
+                        + "Frank wants you to guess the number in his head. It's only between 1-5, so you n/"
+                        + "should get it eventually.");
+                
                 break;
             default:
                 System.out.println("ERROR ON INPUT");
@@ -47,6 +52,12 @@ public class DungeonView extends View {
         }
         
         return true;
+    }
+    
+    public static int randInt(int min, int max) {
+        Random rand = new Random();
+        int randomNum = rand.nextInt((max - min) + 1) + min;
+        return randomNum;
     }
     
         private void showCastle() {
