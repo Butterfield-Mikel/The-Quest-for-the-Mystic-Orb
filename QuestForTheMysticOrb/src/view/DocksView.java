@@ -10,7 +10,7 @@ package view;
  * @author Rich
  */
 public class DocksView extends View {
-    
+    //map[5][1].Castle();
     public DocksView() {
         super("You keep walking until you get to the end of the dock. n/"
                 + "There is a great (S)ea out there to go exploring about in, "

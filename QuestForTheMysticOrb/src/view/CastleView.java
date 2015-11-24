@@ -12,6 +12,7 @@ import java.util.Scanner;
  * @author Rich
  */
 public class CastleView extends View{
+        //map[1][1].Castle();
         public boolean hasMap=false; 
     public CastleView(){
         

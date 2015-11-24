@@ -10,7 +10,7 @@ package view;
  * @author Rich
  */
 public class EnchantedGardenView extends View {
-    
+    //map[4][3].EnchantedGarden();
     public EnchantedGardenView() {
         super("You get across the bridge into the Enchanted Garden. That is the ironic n/"
                 + "name that you give it, due to the face that it looks awful. All you n/"

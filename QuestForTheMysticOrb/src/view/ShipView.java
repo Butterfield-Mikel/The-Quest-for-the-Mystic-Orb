@@ -10,7 +10,7 @@ package view;
  * @author Rich
  */
 public class ShipView extends View {
-    
+    //map[7][1].Ship();
     public ShipView() {
         super("You board the ship to make sure there aren’t any  n/"
                 + "pirates or anything like that. During your search  n/"

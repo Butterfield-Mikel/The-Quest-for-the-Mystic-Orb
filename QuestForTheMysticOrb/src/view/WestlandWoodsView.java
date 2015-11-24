@@ -10,7 +10,7 @@ package view;
  * @author Rich
  */
 public class WestlandWoodsView extends View {
-    
+    //map[4][0].WestlandWoods();
     public WestlandWoodsView() {
         super("Somehow, the apple does the trick and you get yourself to the Westland Woods.n/"
                 + "Great job at that by the way.n/"

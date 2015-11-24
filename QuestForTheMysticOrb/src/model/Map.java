@@ -14,6 +14,7 @@ import java.util.Objects;
 public class Map implements Serializable{
     
     public Map (){
+        
     }
     
     private int row;
