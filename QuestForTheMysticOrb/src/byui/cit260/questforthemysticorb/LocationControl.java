@@ -13,6 +13,15 @@ import java.util.ArrayList;
  * @author Rich
  */
 public class LocationControl {
+
+    public Location[][] getMap() {
+        return map;
+    }
+
+    public void setMap(Location[][] map) {
+        this.map = map;
+    }
+    
     Location[][] map = new Location[7][3];
     
     /*
