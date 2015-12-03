@@ -62,11 +62,11 @@ public class MapControl {
          //   if(p.getLocation();.getRow() == 0) {
         throw new MapControlException("Player can't go that way.");
         
-        Location newLoc = m.getMatrix()[p.getLocation().getRow() - 1][p.getLocation().getColumn()];
+       // Location newLoc = m.getMatrix()[p.getLocation().getRow() - 1][p.getLocation().getColumn()];
         
-        p.setLocation(newLoc);
+      //  p.setLocation(newLoc);
         
-        return true;
+   //     return true;
     }
     
     
