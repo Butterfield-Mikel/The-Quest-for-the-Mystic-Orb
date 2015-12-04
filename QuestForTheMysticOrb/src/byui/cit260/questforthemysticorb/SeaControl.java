@@ -10,6 +10,7 @@ package byui.cit260.questforthemysticorb;
  * @author Mikel
  */
 public class SeaControl {
-   
+    
+    
     
 }

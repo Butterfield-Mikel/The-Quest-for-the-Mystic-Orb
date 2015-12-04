@@ -30,6 +30,9 @@ public class WelcomeView {
     }
     
     public String getPlayerName() {
+        
+        //changed for week 11 stuff but it had an error so I commented it out.
+        //selection = keyboard.nextLine();
         Scanner in = new Scanner(System.in);
         String name = "";
                 
