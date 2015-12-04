@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package view;
-
+import view.ItemsView;
 /**
  *
  * @author Mikel
@@ -45,7 +45,7 @@ public class MapView extends View {
             System.out.println("SHP=Ship BST=Blacksmith SKD=South Kingdom FRM=Farm WWD=Westland Woods XRD=Crossroads");
             System.out.println("BDG=Bridge GDN=Garden DWD=Deep Westland Woods MAN=Mystic Who Warns GZB=Gazebo");
             System.out.println("CAV=Cave DOC=Docks DCV=Deep Cave SEA=Sea BCH=Beach PIR=Pirates SOD=Ship SHK=Shark");
-            System.out.println("Press (T) to return to the tower.");
+            System.out.println("Press (T) to return to the tower. Also, you can (P)rint the items you see to an external file.");
             keyCount++;
 
         } while (keyCount < 2);
@@ -61,6 +61,9 @@ public class MapView extends View {
         switch (input) {
             case 'T':
                showTower();
+                break;        
+                case 'P':
+                  saveItems(); 
                 break;         
             default:
                 System.out.println("ERROR ON INPUT");
@@ -73,5 +76,10 @@ public class MapView extends View {
         TowerView showTower = new TowerView();
         char in = showTower.getInput();
     }
+    
+    private void saveItems() {
+        ItemsView saveItems = new ItemsView();
+    }
+    
 
 }
