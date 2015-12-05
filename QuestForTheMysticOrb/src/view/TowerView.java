@@ -37,9 +37,6 @@ public class TowerView extends View {
         "Westland Woods"
     };
     
-    
-    
-    
 
     public TowerView() {
         super("You enter the tallest tower in the kingdom. Even if n/"

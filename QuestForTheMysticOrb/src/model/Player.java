@@ -58,6 +58,10 @@ public class Player implements Serializable {
         }
         return true;
     }
+
+    public Object getLocation() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
      
     
     
