@@ -45,6 +45,9 @@ public class EnchantedGardenView extends View {
                         + "you are really hungry and the King didn't say anything about starving n/"
                         + "while trying to save the Kingdom");
                 break;
+           
+            /*
+            
             case 'N' :
                 MoveLocation m = new MoveLocation();
                 try {
@@ -64,6 +67,9 @@ public class EnchantedGardenView extends View {
             default:
                 System.out.println("ERROR ON INPUT");
                 break;
+                    
+                    */
+                    
         }
         return true;
     }

@@ -9,6 +9,10 @@ package view;
  *
  * @author Rich
  */
+
+/*
+
+
 public class GazeboView extends View {
     //map[3][5].Gazebo();
     public GazeboView() {
@@ -28,6 +32,9 @@ public class GazeboView extends View {
      * @return
      */
     
+
+/*
+
     @Override
     public boolean doAction(char input) {
         switch (input) {
@@ -77,3 +84,6 @@ public class GazeboView extends View {
     }
     
 }
+
+
+*/
