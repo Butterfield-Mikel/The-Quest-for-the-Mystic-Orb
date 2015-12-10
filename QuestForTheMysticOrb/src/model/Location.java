@@ -7,6 +7,7 @@ package model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import view.ViewInterface;
 
 /**
  *
@@ -14,10 +15,19 @@ import java.util.Objects;
  */
 public class Location implements Serializable {
 
-    private String row;
-    private String column;
-    private Item item; 
+    private int row;
+    private int column;
+    private Item item;
+    private String name;
+    private ViewInterface locationView;
 
+    public Location(int r, int c, String name, ViewInterface vi) {
+        this.row = r;
+        this.column = c;
+        this.name = name;
+        this.locationView = vi;
+    }
+    
     @Override
     public String toString() {
         return "Location{" + "row=" + row + ", column=" + column + ", item=" + item + '}';
@@ -56,20 +66,28 @@ public class Location implements Serializable {
     public Location() {
     }
 
-    public String getRow() {
+    public int getRow() {
         return row;
     }
 
-    public void setRow(String row) {
+    public void setRow(int row) {
         this.row = row;
     }
 
-    public String getColumn() {
+    public int getColumn() {
         return column;
     }
 
-    public void setColumn(String column) {
+    public void setColumn(int column) {
         this.column = column;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Item getItem() {
@@ -79,7 +97,14 @@ public class Location implements Serializable {
     public void setItem(Item item) {
         this.item = item;
     }
-  
-    
+
+    public ViewInterface getLocationView() {
+        return locationView;
+    }
+
+    public void setLocationView(ViewInterface locationView) {
+        this.locationView = locationView;
+    }
+
     
 }

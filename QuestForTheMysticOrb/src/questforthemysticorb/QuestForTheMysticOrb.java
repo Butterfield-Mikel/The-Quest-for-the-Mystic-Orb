@@ -58,24 +58,34 @@ public class QuestForTheMysticOrb {
 
         // week 11 stuff
         try {
-            QuestForTheMysticOrb.inFile
-                    = new BufferedReader(new InputStreamReader(System.in));
+            QuestForTheMysticOrb.inFile = new BufferedReader(new InputStreamReader(System.in));
 
-  //          QuestForTheMysticOrb.outFile = new printWriter(System.out, true);
+            Player player = new Player();
+
+            WelcomeView welcomeView = new WelcomeView();
+            welcomeView.displayBanner();
+
+            player.setName(welcomeView.getPlayerName());
+
+            welcomeView.displayPlayerNameBanner(player);
+
+            Game.getInstance().setPlayer(player);
             
+            //mainMenuView
+            MainMenuView mainView = new MainMenuView();
+            mainView.display();
+
+            //          QuestForTheMysticOrb.outFile = new printWriter(System.out, true);
             String filePath = "log.txt";
-            
-            
+
             //this will be for windowsQuestForTheMysticOrb.logFile = new PrintWriter(C:\Users\Documents\tmp\logfile.txt);
-           //for you mac bros QuestForTheMysticOrb.logFile = new PrintWriter(/users/Documents/tmp/logfile.txt);
-            
-            
+            //for you mac bros QuestForTheMysticOrb.logFile = new PrintWriter(/users/Documents/tmp/logfile.txt);
             // create startprogramview and start the program
- //           StartProgramView startProgramView = new StartProgramView();
- //           StartProgramView.display();
+            //           StartProgramView startProgramView = new StartProgramView();
+            //           StartProgramView.display();
             return;
         } catch (Throwable e) {
-            
+
             System.out.println("Exception: " + e.toString()
                     + "\nCause: " + e.getCause()
                     + "\nMessage: " + e.getMessage());
@@ -90,36 +100,17 @@ public class QuestForTheMysticOrb {
                 if (QuestForTheMysticOrb.outFile != null) {
                     QuestForTheMysticOrb.outFile.close();
                 }
-                
-                if (QuestForTheMysticOrb.logFile != null)
+
+                if (QuestForTheMysticOrb.logFile != null) {
                     QuestForTheMysticOrb.logFile.close();
+                }
 
             } catch (IOException ex) {
                 System.out.println("Error closing files");
                 return;
             }
 
-        // end week 11 stuff
-            Player player = new Player();
-
-            WelcomeView welcomeView = new WelcomeView();
-            welcomeView.displayBanner();
-
-            player.setName(welcomeView.getPlayerName());
-
-            welcomeView.displayPlayerNameBanner(player);
-
-            //mainMenuView
-            MainMenuView mainView = new MainMenuView();
-            mainView.display();
-
-            char in = mainView.getInput();
-
-            System.out.println("You entered " + in);
-
-        //GallowsView
-            //GallowsView gallowsView = new GallowsView();
-            //char in = gallowsView.getInput();
+            // end week 11 stuff
         }
 
     }

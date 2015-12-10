@@ -4,55 +4,26 @@
  * and open the template in the editor.
  */
 package byui.cit260.questforthemysticorb;
+
 import java.util.ArrayList;
+import model.Game;
+import model.Item;
+
 /**
  *
  * @author Rich
  */
 public class ItemControl {
-    public static void main(int args[]){
+   
+    public static void initItemList() {
+        Game.getInstance().setAvailableItems(new ArrayList<Item>());
         
-        ArrayList<Inventory> Inv = new ArrayList<>();
+        Item bucket = new Item();
+        bucket.setName("Bucket");
+        bucket.setDescription("Boring");
         
-        Inventory bucket = new Inventory(0);
+        Game.getInstance().getAvailableItems().add(bucket);
         
-        Inv.add(bucket);
-        Inv.add(new Inventory(1));
-        
-        Inventory corn = new Inventory(1);
-        Inv.add(corn);
-        Inv.add(new Inventory(2));
-        
-        Inventory gauntlets = new Inventory(2);
-        Inv.add(gauntlets);
-        Inv.add(new Inventory(3));
-        
-        Inventory torch = new Inventory(3);
-        Inv.add(torch);
-        Inv.add(new Inventory(4));
-        
-        //Inv.get(0);
     }
     
-    public static class Inventory {
-        
-        private int item;
-        
-        public Inventory(int item) {
-            item = 1;
-        }
-        
-        public Inventory() {
-            
-        }
-        
-        public int getItem() {
-            return item;
-        }
-        
-        public void setItem(int item){
-            this.item = item;
-        }
-        
-    }
 }

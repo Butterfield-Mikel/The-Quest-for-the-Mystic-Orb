@@ -6,6 +6,7 @@
 package model;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  *
@@ -13,7 +14,7 @@ import java.io.Serializable;
  */
 public class Game implements Serializable {
     
-    private Item[] inventory;
+    private List<Item> availableItems;
     private Player player;
     private String[] actors;
     private Bucket bucket;
@@ -23,18 +24,65 @@ public class Game implements Serializable {
     private Map map;
     private MysticOrb mysticOrb;
     private Torch torch;
-/*    
-    public Game {
+
+    private static Game instance;
     
-}
-    public double getTotalTime() {
-        return totalTime;
+    private Game() {
+        
     }
-    public void setTotalTime(double totalTime) {
-        this.totalTime = totalTime;
+    
+    public static Game getInstance() {
+        if(instance == null) {
+            instance = new Game();
+        }
+        return instance;
     }
-    public Item[] getInventory() {
-        return inventory;
+    
+    public static void setInstance(Game g) {
+        instance = g;
     }
-    */
+    
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public List<Item> getAvailableItems() {
+        return availableItems;
+    }
+
+    public void setAvailableItems(List<Item> availableItems) {
+        this.availableItems = availableItems;
+    }
+
+    public Item getItemByName(String name) {
+        if(availableItems != null) {
+            for(Item i : availableItems) {
+                if(i.getName().equals(name)) {
+                    return i;
+                }
+            }
+        }
+        return null;
+    }
+    
+    public Item getItemByNameAndRemove(String name) {
+        Item i = getItemByName(name);
+        
+        availableItems.remove(i);
+        
+        return i;
+    }
+    
 }

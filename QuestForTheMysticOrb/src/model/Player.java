@@ -18,12 +18,28 @@ public class Player implements Serializable {
 
     private String name;
     private List<Item> items;
-    
+    private Location location;
+
     public Player() {
-    items = new ArrayList<Item>();
+        items = new ArrayList<Item>();
     }
-    
-    
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
     public String getName() {
         return name;
     }
@@ -58,11 +74,4 @@ public class Player implements Serializable {
         }
         return true;
     }
-
-    public Object getLocation() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-     
-    
-    
 }

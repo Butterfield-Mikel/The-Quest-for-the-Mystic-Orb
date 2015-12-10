@@ -20,37 +20,44 @@ import questforthemysticorb.QuestForTheMysticOrb;
  */
 public class GameControl {
 
- /*   public static void createNewGame(Player player) {
+    public static void createNewGame() {
 
-        Game game = new Game();
-        QuestForTheMysticOrb.setCurrentGame(game);
+        Player oldPlayer = Game.getInstance().getPlayer();
+        Player newPlayer = new Player();
+        newPlayer.setName(oldPlayer.getName());
+        Game.setInstance(null);
+        Game game = Game.getInstance();
 
-        game.setPlayer(player);
+        game.setPlayer(newPlayer);
 
-        InventoryItem[] inventoryList = GameControl.createInventoryList();
-        game.setInventory(inventoryList);
-        
-        Bucket bucket = new Bucket();
-        game.setBucket(bucket);
-        
-        Corn corn = new Corn();
-        game.setCorn(Corn);
-        
-        EnchantedApple enchantedApple = new EnchantedApple();
-        game.setEnchantedApple(enchantedApple);
-        
-        Gauntlets gauntlets = new Gauntlets();
-        game.setGauntlets(gauntlets);
-        
-        Map map = new Map();
+//        InventoryItem[] inventoryList = GameControl.createInventoryList();
+//        game.setInventory(inventoryList);
+//
+//        Bucket bucket = new Bucket();
+//        game.setBucket(bucket);
+//
+//        Corn corn = new Corn();
+//        game.setCorn(Corn);
+//
+//        EnchantedApple enchantedApple = new EnchantedApple();
+//        game.setEnchantedApple(enchantedApple);
+//
+//        Gauntlets gauntlets = new Gauntlets();
+//        game.setGauntlets(gauntlets);
+
+        Map map = MapControl.initMap();
         game.setMap(map);
+
+        newPlayer.setLocation(map.getStartingLocation());
         
-        MysticOrb mysticOrb = new MysticOrb();
-        game.setMysticOrb(mysticOrb);
+        ItemControl.initItemList();
         
-        Torch torn = new Torch();
-        game.setTorch(torch);
-        
+//        MysticOrb mysticOrb = new MysticOrb();
+//        game.setMysticOrb(mysticOrb);
+
+//        Torch torn = new Torch();
+//        game.setTorch(torch);
+
     }
-*/
+
 }

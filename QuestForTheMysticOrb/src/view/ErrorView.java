@@ -14,20 +14,20 @@ import questforthemysticorb.QuestForTheMysticOrb;
  */
 public class ErrorView {
     
-    private static final PrintWriter errorFile = QuestForTheMysticOrb.getOutFile();    
-    public static void display(String className, String errorMessage) {
-        
-        errorFile.println(
-        "--------------------------------" +
-        "\n- ERROR - " + errorMessage +
-        "\n--------------------------------"      
-        );
+//    private static final PrintWriter errorFile = QuestForTheMysticOrb.getOutFile();    
+//    public static void display(String className, String errorMessage) {
+//        
+//        errorFile.println(
+//        "--------------------------------" +
+//        "\n- ERROR - " + errorMessage +
+//        "\n--------------------------------"      
+//        );
                 
                 //log error
                 
    //             logFile.println(className + " - " + errorMessage);
                 
      
-    }
+//    }
     
 }

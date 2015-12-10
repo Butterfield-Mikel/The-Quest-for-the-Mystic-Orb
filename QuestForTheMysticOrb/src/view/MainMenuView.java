@@ -5,7 +5,10 @@
  */
 package view;
 
+import byui.cit260.questforthemysticorb.GameControl;
 import java.util.Scanner;
+import model.Game;
+import questforthemysticorb.QuestForTheMysticOrb;
 import view.CastleView;
 
 /**
@@ -54,11 +57,10 @@ public class MainMenuView extends View{
 
     private void startNewGame() {
         // this should create a new game.
-  //      GameControl.createNewGame(QuestForTheMysticOrb.getPlayer());
+        GameControl.createNewGame();
         
-        // and display the game menu
-   //     GameMenuView gameMenu = new GameMenuView();
-   //     gameMenu.display();
+        ViewInterface view = Game.getInstance().getPlayer().getLocation().getLocationView();
+        view.display();
     }
 
     private void loadGame() {
