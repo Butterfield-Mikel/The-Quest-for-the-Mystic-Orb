@@ -10,8 +10,29 @@ package model;
  * @author Daniel
  */
 public enum LocationType {
+
     Castle,
     Tower,
     Dungeon,
-    Kitchen;
+    Kitchen,
+    Gallows,
+    NorthKingdom,
+    Shoppe,
+    Blacksmith,
+    SouthKingdom,
+    Farm,
+    WestlandWoods,
+    Crossroads,
+    Bridge,
+    EnchantedGarden,
+    DeepWestlandWoods,
+    Docks,
+    River,
+    Gazebo,
+    DeepCave,
+    Sea,
+    Beach,
+    WestSea,
+    Ship,
+    EastSea;
 }

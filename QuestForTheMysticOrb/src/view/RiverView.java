@@ -11,7 +11,7 @@ package view;
  */
 public class RiverView  {
        
-    public void RiverView(){
+    public RiverView(){
             System.out.println("You jumped in to a river, now you are dead");
             showMainMenu();
                

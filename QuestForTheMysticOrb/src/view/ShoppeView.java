@@ -9,9 +9,9 @@ package view;
  *
  * @author mannj14
  */
-public class ShopView extends View {
+public class ShoppeView extends View {
     
-    public ShopView() {
+    public ShoppeView() {
         super("In the shoppe you can buy many item that may help you on your quest"
                 + "others may be a complete waste of time"
                 + "but which are which, that will be up to you to decide"

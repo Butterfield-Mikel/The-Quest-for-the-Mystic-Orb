@@ -52,8 +52,8 @@ public class NorthKingdomView extends View {
         }
         
         private void showGallows() {
-        GallowsView showGallows = new GallowsView();
-        char in = showGallows.getInput();
+      //  GallowsView showGallows = new GallowsView();
+    //    char in = showGallows.getInput();
         }
         
         private void showSouthKingdom() {

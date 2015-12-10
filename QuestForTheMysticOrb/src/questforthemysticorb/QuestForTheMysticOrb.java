@@ -1,4 +1,5 @@
-/*
+
+        /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -14,12 +15,13 @@ import model.EnchantedApple;
 import model.Game;
 import model.Location;
 import model.Player;
-import view.GallowsView;
+//import view.GallowsView;
 import view.MainMenuView;
 import view.WelcomeView;
 import view.CastleView;
 
 /**
+ * 
  *
  * @author Mikel
  */
