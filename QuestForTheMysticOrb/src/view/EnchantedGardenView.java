@@ -46,7 +46,7 @@ public class EnchantedGardenView extends View {
                         + "while trying to save the Kingdom");
                 break;
            
-            /*
+  /*          
             
             case 'N' :
                 MoveLocation m = new MoveLocation();
@@ -68,7 +68,7 @@ public class EnchantedGardenView extends View {
                 System.out.println("ERROR ON INPUT");
                 break;
                     
-                    */
+             */     
                     
         }
         return true;
@@ -83,3 +83,5 @@ public class EnchantedGardenView extends View {
         char in = showBridge.getInput();
         }
 }
+
+
