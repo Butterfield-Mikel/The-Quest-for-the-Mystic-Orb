@@ -5,6 +5,11 @@
  */
 package view;
 
+import byui.cit260.questforthemysticorb.MapControl;
+import model.Game;
+import model.LocationType;
+import model.Player;
+
 /**
  *
  * @author Mikel
@@ -12,9 +17,9 @@ package view;
 public class SeaView extends View {
     
        public SeaView() {
-        super("You start to smell the crisp relaxing air of the sea, as you n/"
-                + "start to relax you remember that you have a kingdom to n/"
-                + "save. In the distance you see a great sea. You see a  n/"
+        super("You start to smell the crisp relaxing air of the sea, as you \n"
+                + "start to relax you remember that you have a kingdom to \n"
+                + "save. In the distance you see a great sea. You see a  \n"
                 + "(S)hip with nobody on it, a (B)each, and some (D)ocks.");
     }
     
@@ -43,18 +48,39 @@ public class SeaView extends View {
     }
     
         private void showBeach() {
-     //   BeachView showBeach = new BeachView();
-     //   char in = showBeach.getInput();
+      MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Beach);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
             
         private void showShip() {
-        ShipView showShip = new ShipView();
-        char in = showShip.getInput();
+        MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Ship);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
         
         private void showDocks() {
-        DocksView showDocks = new DocksView();
-        char in = showDocks.getInput();
+         MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Docks);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
         
         

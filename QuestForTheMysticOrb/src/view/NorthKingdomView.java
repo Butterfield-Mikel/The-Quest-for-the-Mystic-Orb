@@ -5,6 +5,11 @@
  */
 package view;
 
+import byui.cit260.questforthemysticorb.MapControl;
+import model.Game;
+import model.LocationType;
+import model.Player;
+
 /**
  *
  * @author Rich
@@ -12,10 +17,10 @@ package view;
 public class NorthKingdomView extends View {
     
     public NorthKingdomView() {
-        super("Walking outside into the North Kingdom, you see some friendly n/"
-                + "looking (G)allows, and a dark and dreary (S)hoppe. Scratch that, n/"
-                + "the Shoppe is friendly and the Gallows are dark. You can go check n/"
-                + "out either one, or keep going to the South (K)ingdom. Then there n/"
+        super("Walking outside into the North Kingdom, you see some friendly \n"
+                + "looking (G)allows, and a dark and dreary (S)hoppe. Scratch that, \n"
+                + "the Shoppe is friendly and the Gallows are dark. You can go check \n"
+                + "out either one, or keep going to the South (K)ingdom. Then there \n"
                 + "is always going back into the (C)astle.");
     }
     
@@ -47,22 +52,50 @@ public class NorthKingdomView extends View {
     }
     
         private void showShoppe() {
-    //    ShoppeView showShoppe = new ShoppeView();
-    //   char in = showShoppe.getInput();
+     MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Shoppe);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
         
         private void showGallows() {
-      //  GallowsView showGallows = new GallowsView();
-    //    char in = showGallows.getInput();
+      MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Gallows);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
         
         private void showSouthKingdom() {
-        SouthKingdomView showSouthKingdom = new SouthKingdomView();
-        char in = showSouthKingdom.getInput();
+        MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.SouthKingdom);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
         
         private void showCastle() {
-        CastleView showCastle = new CastleView();
-        char in = showCastle.getInput();
+         MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Castle);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
 }

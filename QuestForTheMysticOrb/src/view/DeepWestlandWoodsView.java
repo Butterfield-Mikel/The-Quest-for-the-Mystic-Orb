@@ -5,6 +5,11 @@
  */
 package view;
 
+import byui.cit260.questforthemysticorb.MapControl;
+import model.Game;
+import model.LocationType;
+import model.Player;
+
 /**
  *
  * @author mannj14
@@ -12,10 +17,10 @@ package view;
 public class DeepWestlandWoodsView extends View {
     
     public DeepWestlandWoodsView() {
-        super("You have entered the Deep Westland Woods, it seems rather dark and scary n/"
-        + "As you look deeper into the woods you see what apears to be a wooden box of some kind n/"
-        + "you realize that you really only have two choices at this point. /n"
-        + "You can (A)proach the box and perhaps loose a limb, or you can (R)un back to the Westland Woods n/"
+        super("You have entered the Deep Westland Woods, it seems rather dark and scary \n"
+        + "As you look deeper into the woods you see what apears to be a wooden box of some kind \n"
+        + "you realize that you really only have two choices at this point. \n"
+        + "You can (A)proach the box and perhaps loose a limb, or you can (R)un back to the Westland Woods \n"
         + "like a scared little girl.");        
     }
     @Override
@@ -38,8 +43,15 @@ public class DeepWestlandWoodsView extends View {
     }
     
         private void showWestlandWoods() {
-        WestlandWoodsView showWestlandWoods = new WestlandWoodsView();
-        char in = showWestlandWoods.getInput();
+        MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.WestlandWoods);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
     
 }

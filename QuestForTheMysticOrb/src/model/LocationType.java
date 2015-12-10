@@ -29,6 +29,7 @@ public enum LocationType {
     Docks,
     River,
     Gazebo,
+    cave,
     DeepCave,
     Sea,
     Beach,

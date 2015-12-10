@@ -5,6 +5,11 @@
  */
 package view;
 
+import byui.cit260.questforthemysticorb.MapControl;
+import model.Game;
+import model.LocationType;
+import model.Player;
+
 /**
  *
  * @author Mikel
@@ -12,10 +17,10 @@ package view;
 public class BlacksmithView extends View {
 
     public BlacksmithView() {
-        super("You see a blacksmith working in his shop. n/"
-                + "he looks very hungry, probably because n/"
-                + "of the curse that has been put on the kingdom. /n"
-                + "You also see a pair of beautifully crafted (G)auntlets. n/"
+        super("You see a blacksmith working in his shop. \n"
+                + "he looks very hungry, probably because \n"
+                + "of the curse that has been put on the kingdom. \n"
+                + "You also see a pair of beautifully crafted (G)auntlets. \n"
                 + "The only direction you can go is back to the (S)outh Kingdom.  ");
     }
 
@@ -46,8 +51,15 @@ public class BlacksmithView extends View {
     }
 
     private void showSouthKingdom() {
-        SouthKingdomView showSouthKingdom = new SouthKingdomView();
-        char in = showSouthKingdom.getInput();
+        MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.SouthKingdom);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
     }
 
 

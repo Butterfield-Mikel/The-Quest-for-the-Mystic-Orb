@@ -5,6 +5,11 @@
  */
 package view;
 
+import byui.cit260.questforthemysticorb.MapControl;
+import model.Game;
+import model.LocationType;
+import model.Player;
+
 /**
  *
  * @author mannj14
@@ -12,8 +17,8 @@ package view;
 public class BeachView extends View {
     
     public BeachView() {
-        super("You have decided to take a small break fromt eh stressful life of a hero /n"
-        + "to take a relaxing walk on the beach. After nice walk you can have to make a tough /n"
+        super("You have decided to take a small break fromt eh stressful life of a hero \n"
+        + "to take a relaxing walk on the beach. After nice walk you can have to make a tough \n"
                 + "decison, (B)uild a sand castle or (R)eturn to the Docks ");
         
     }
@@ -35,8 +40,15 @@ public class BeachView extends View {
     }
     
     private void showDocks() {
-    DocksView showDocks = new DocksView();
-    char in = showDocks.getInput();
+    MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Docks);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
     }
     
     

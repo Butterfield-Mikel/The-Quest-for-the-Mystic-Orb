@@ -5,6 +5,11 @@
  */
 package view;
 
+import byui.cit260.questforthemysticorb.MapControl;
+import model.Game;
+import model.LocationType;
+import model.Player;
+
 /**
  *
  * @author Rich
@@ -39,10 +44,10 @@ public class EnchantedGardenView extends View {
                 showBridge();
                 break;
             case 'Z' :
-                System.out.println("You water the almost dead apple tree and it springs to life! n/"
-                        + "It magically grows a presumably magic apple for you to eat. You take n/"
-                        + "the apple and eat it without questioning it's origins because face it, n/"
-                        + "you are really hungry and the King didn't say anything about starving n/"
+                System.out.println("You water the almost dead apple tree and it springs to life! \n"
+                        + "It magically grows a presumably magic apple for you to eat. You take \n"
+                        + "the apple and eat it without questioning it's origins because face it, \n"
+                        + "you are really hungry and the King didn't say anything about starving \n"
                         + "while trying to save the Kingdom");
                 break;
            
@@ -74,13 +79,27 @@ public class EnchantedGardenView extends View {
         return true;
     }
         private void showGazebo() {
-        GazeboView showGazebo = new GazeboView();
-        char in = showGazebo.getInput();
+         MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Gazebo);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
         
         private void showBridge() {
-        BridgeView showBridge = new BridgeView();
-        char in = showBridge.getInput();
+         MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Bridge);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
 }
 

@@ -5,6 +5,11 @@
  */
 package view;
 
+import byui.cit260.questforthemysticorb.MapControl;
+import model.Game;
+import model.LocationType;
+import model.Player;
+
 /**
  *
  * @author Mikel
@@ -12,9 +17,9 @@ package view;
 public class SouthKingdomView extends View {
     
       public SouthKingdomView() {
-        super("You approach the southern end of the kingdom. You look n/"
-                + "around and see the (N)orth end of the kingdom, a (F)arm n/"
-                + "to your east, a (B)lacksmith to the west and the (C)rossroads n/"
+        super("You approach the southern end of the kingdom. You look \n"
+                + "around and see the (N)orth end of the kingdom, a (F)arm \n"
+                + "to your east, a (B)lacksmith to the west and the (C)rossroads \n"
                 + "outside of the kingdom to the south.");
     }
     
@@ -46,22 +51,50 @@ public class SouthKingdomView extends View {
     }
     
         private void showNorthKingdom() {
-        NorthKingdomView showNorthKingdom = new NorthKingdomView();
-        char in = showNorthKingdom.getInput();
+        MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.NorthKingdom);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
         
         private void showFarm() {
-        FarmView showFarm = new FarmView();
-        char in = showFarm.getInput();
+         MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Farm);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
         
         private void showBlacksmith() {
-        BlacksmithView showBlacksmith = new BlacksmithView();
-        char in = showBlacksmith.getInput();
+         MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Blacksmith);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
         
         private void showCrossroads() {
-     //   CrossroadsView showCrossroads = new CrossroadsView();
-       // char in = showCrossroads.getInput();
+      MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Crossroads);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
 }

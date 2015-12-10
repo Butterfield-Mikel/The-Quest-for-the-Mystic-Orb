@@ -5,6 +5,11 @@
  */
 package view;
 
+import byui.cit260.questforthemysticorb.MapControl;
+import model.Game;
+import model.LocationType;
+import model.Player;
+
 /**
  *
  * @author mannj14
@@ -12,15 +17,15 @@ package view;
 public class CrossroadsView extends View {
     
  public CrossroadsView() {
-        super("Oh dear, now you have to make the tough decision n/"
-                + "which way should you go n/"
-                + "You have four options n/"
-                + "Head (N)orth to the South Kingdom n/"
-                + "Head (E)ast to the bridge n/"
-                + "Head (S)outh to the Docks n/"
-                + "Head (W)est to the Westland Woods. n/"
-                + "As you are pondering the which direction to travel n/"
-                + "an old women appears from the shadows n/"
+        super("Oh dear, now you have to make the tough decision \n"
+                + "which way should you go \n"
+                + "You have four options \n"
+                + "Head (N)orth to the South Kingdom \n"
+                + "Head (E)ast to the bridge \n"
+                + "Head (S)outh to the Docks \n"
+                + "Head (W)est to the Westland Woods. \n"
+                + "As you are pondering the which direction to travel \n"
+                + "an old women appears from the shadows \n"
                 + "If you would like you can (T)alk to her.");
     
     }
@@ -56,19 +61,47 @@ public class CrossroadsView extends View {
     }
     
         private void showSouthKingdom() {
-        SouthKingdomView showSouthKingdom = new SouthKingdomView();
-        char in = showSouthKingdom.getInput();
+       MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.SouthKingdom);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
         private void showBridge() {
-        BridgeView showBridge = new BridgeView();
-        char in = showBridge.getInput();
+        MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Bridge);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
         private void showDocks() {
-        DocksView showDocks = new DocksView();
-        char in = showDocks.getInput();
+       MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Docks);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
         private void showWestlandWoods() {
-        WestlandWoodsView showWestlandWoods = new WestlandWoodsView();
-        char in = showWestlandWoods.getInput();
+        MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.WestlandWoods);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
 }

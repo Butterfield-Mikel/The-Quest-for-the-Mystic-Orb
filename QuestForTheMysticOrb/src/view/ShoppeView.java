@@ -5,6 +5,11 @@
  */
 package view;
 
+import byui.cit260.questforthemysticorb.MapControl;
+import model.Game;
+import model.LocationType;
+import model.Player;
+
 /**
  *
  * @author mannj14
@@ -46,8 +51,15 @@ public class ShoppeView extends View {
     }
 
      private void showNorthKingdom() {
-     NorthKingdomView showNorthKingdom = new NorthKingdomView();
-     char in = showNorthKingdom.getInput();
+      MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.NorthKingdom);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
      }
     
     

@@ -25,7 +25,7 @@ public class CastleView extends View {
     public CastleView() {
 
         super("You stand there, alone in the Castle. Looking around the room, you see a \n"
-                + "(B)UCKET on the floor. It might come in handy, you never know. Or you \n"
+                + "(B)ucket on the floor. It might come in handy, you never know. Or you \n"
                 + "might be stuck awkwardly carrying a bucket around the whole game, your call.\n"
                 + " \n"
                 + "Obvious exits from here are the (T)OWER, (D)UNGEON, (K)ITCHEN, and (N)ORTH KINGDOM. \n"
@@ -51,12 +51,7 @@ public class CastleView extends View {
                 showTower();
                 break;
             case 'N':
-                if (hasMap == true) {
-                    showNorthKingdom();
-                } else {
-                    System.out.println("You really should find a MAP or something before wandering around a whole Kingdom. n/"
-                            + "Maybe if you head to the TOWER and take a look around you can make one. Sorry, no Rand McNally option.");
-                }
+               showNorthKingdom();
                 break;
             default:
                 System.out.println("ERROR ON INPUT");
@@ -77,18 +72,39 @@ public class CastleView extends View {
     }
 
     private void showKitchen() {
-        KitchenView showKitchen = new KitchenView();
-        char in = showKitchen.getInput();
+       MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Kitchen);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
     }
 
     private void showTower() {
-        TowerView showTower = new TowerView();
-        char in = showTower.getInput();
+        MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Tower);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
     }
 
     private void showNorthKingdom() {
-        NorthKingdomView showNorthKingdom = new NorthKingdomView();
-        char in = showNorthKingdom.getInput();
+        MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.NorthKingdom);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
     }
 
     private void getBucket() {

@@ -5,6 +5,11 @@
  */
 package view;
 
+import byui.cit260.questforthemysticorb.MapControl;
+import model.Game;
+import model.LocationType;
+import model.Player;
+
 /**
  *
  * @author mannj14
@@ -12,10 +17,10 @@ package view;
 public class CaveView extends View {
    
     public CaveView() {
-        super("As you are walking throught the forest you notice that there is a cave. n/"
-        + "as you enter the cave you have the feeling that this might be a bad idea,  n/"
-        + "but teh spirit of adventure is strong n/"
-        + "What should you do (C)ontinue deeper into the cave, or (R)eturn to the safety of the woods.  n/"
+        super("As you are walking throught the forest you notice that there is a cave. \n"
+        + "as you enter the cave you have the feeling that this might be a bad idea,  \n"
+        + "but teh spirit of adventure is strong \n"
+        + "What should you do (C)ontinue deeper into the cave, or (R)eturn to the safety of the woods.  "
         );
     
     }
@@ -40,12 +45,26 @@ public class CaveView extends View {
     }
     
         private void showDeepCave() {
-        DeepCaveView showDeepCave = new DeepCaveView();
-       
+        MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.DeepCave);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
         private void showDeepWestlandWoods() {
-        DeepWestlandWoodsView showDeepWeestlandWoods = new DeepWestlandWoodsView();
-       
+       MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.DeepWestlandWoods);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
         }
     
 }

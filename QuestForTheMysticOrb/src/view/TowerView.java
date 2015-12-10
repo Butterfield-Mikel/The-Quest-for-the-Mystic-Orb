@@ -5,6 +5,11 @@
  */
 package view;
 
+import byui.cit260.questforthemysticorb.MapControl;
+import model.Game;
+import model.LocationType;
+import model.Player;
+
 /**
  *
  * @author Mikel
@@ -39,12 +44,12 @@ public class TowerView extends View {
     
 
     public TowerView() {
-        super("You enter the tallest tower in the kingdom. Even if n/"
-                + "you don’t find anything useful up here you still  n/"
-                + "needed the exercise. In the tower you can look n/"
-                + "out at the entire kingdom and the land surrounding  n/"
-                + "It. You can (L)ook around and count the locations. n/"
-                + "There is a (M)ap on the table. You don’t see anything n/"
+        super("You enter the tallest tower in the kingdom. Even if \n"
+                + "you don’t find anything useful up here you still  \n"
+                + "needed the exercise. In the tower you can look \n"
+                + "out at the entire kingdom and the land surrounding  \n"
+                + "It. You can (L)ook around and count the locations. \n"
+                + "There is a (M)ap on the table. You don’t see anything \n"
                 + "Else so you can go back (D)ownstairs to the main castle. ");
     }
 
@@ -76,8 +81,15 @@ public class TowerView extends View {
     }
 
     private void showCastle() {
-        CastleView showCastle = new CastleView();
-        char in = showCastle.getInput();
+         MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Castle);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
     }
     
     

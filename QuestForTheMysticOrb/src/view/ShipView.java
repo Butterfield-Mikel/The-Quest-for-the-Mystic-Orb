@@ -12,13 +12,13 @@ package view;
 public class ShipView extends View {
     //map[7][1].Ship();
     public ShipView() {
-        super("You board the ship to make sure there aren’t any  n/"
-                + "pirates or anything like that. During your search  n/"
-                + "you start to question your own morals. I mean,  n/"
-                + "seriously, you just get one someone else’s ship? n/"
-                + "I bet they worked really hard for this! Well, the n/"
-                + "damage is done, so if you want you can swim back n/"
-                + "to the (S)ea and go to the beach from there, or "
+        super("You board the ship to make sure there aren’t any  \n"
+                + "pirates or anything like that. During your search  \n"
+                + "you start to question your own morals. I mean,  \n"
+                + "seriously, you just get one someone else’s ship? \n"
+                + "I bet they worked really hard for this! Well, the \n"
+                + "damage is done, so if you want you can swim back \n"
+                + "to the (S)ea and go to the beach from there, or \n"
                 + "you can sail (E)ast or (W)east to see where it takes you.");
     }
     

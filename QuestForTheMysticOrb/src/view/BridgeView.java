@@ -5,6 +5,11 @@
  */
 package view;
 
+import byui.cit260.questforthemysticorb.MapControl;
+import model.Game;
+import model.LocationType;
+import model.Player;
+
 /**
  *
  * @author Mikel
@@ -12,11 +17,11 @@ package view;
 public class BridgeView extends View {
 
     public BridgeView() {
-        super("As you are walking you see a bridge. Unfortunately you n/"
-                + "cannot go further east without crossing the bridge.  n/"
-                + "he bridge is covered with a thorn bush. You could try n/"
-                + "to (M)ove the bush, but it looks like you might need n/"
-                + "something to help you. You can always turn back n/"
+        super("As you are walking you see a bridge. Unfortunately you \n"
+                + "cannot go further east without crossing the bridge.  \n"
+                + "he bridge is covered with a thorn bush. You could try \n"
+                + "to (M)ove the bush, but it looks like you might need \n"
+                + "something to help you. You can always turn back \n"
                 + "And go to the (C)rossroads or head down to the (R)iver.");
     }
 
@@ -48,18 +53,39 @@ public class BridgeView extends View {
     }
 
     private void showCrossroads() {
-   //     CrossroadsView showCrossroads = new CrossroadsView();
-   //    char in = showCrossroads.getInput();
+   MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Crossroads);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
     }
 
     private void showRiver() {
-    //    RiverView showRiver = new RiverView();
-     //   char in = showRiver.getInput();
+    MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.River);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
     }
 
      private void showEnchantedGarden() {
-     EnchantedGardenView showEnchantedGarden = new EnchantedGardenView();
-     char in = showEnchantedGarden.getInput();
+    MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.EnchantedGarden);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
      }
      
 }

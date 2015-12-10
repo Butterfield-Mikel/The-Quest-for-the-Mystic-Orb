@@ -5,7 +5,11 @@
  */
 package view;
 
+import byui.cit260.questforthemysticorb.MapControl;
 import java.util.Random;
+import model.Game;
+import model.LocationType;
+import model.Player;
 
 /**
  *
@@ -31,21 +35,21 @@ public class DungeonView extends View {
 
         switch (input) {
             case 'C':
-                System.out.println("You decide that there isn't much going on down here, n/"
+                System.out.println("You decide that there isn't much going on down here, \n"
                         + "and head back to the castle.");
                 showCastle();
                 break;
             case 'T':
-                System.out.println("You attempt a conversation with the guard and ask him n/"
+                System.out.println("You attempt a conversation with the guard and ask him \n"
                         + "his name. He says it's Frank. What were the odds?");
                 break;
             case 'L':
-                System.out.println("Like an idiot you walk into the nearest cell and look n/"
-                        + "around. Your hear the door slam shut behind you and Frank giggles n/"
-                        + "like a school girl. You immediatly regret all the decisions in your n/"
+                System.out.println("Like an idiot you walk into the nearest cell and look \n"
+                        + "around. Your hear the door slam shut behind you and Frank giggles \n"
+                        + "like a school girl. You immediatly regret all the decisions in your \n"
                         + "life that have brought you to this point.");
-                System.out.println("*********************************************************************n/"
-                        + "Frank wants you to guess the number in his head. It's only between 1-5, so you n/"
+                System.out.println("*********************************************************************\n"
+                        + "Frank wants you to guess the number in his head. It's only between 1-5, so you \n"
                         + "should get it eventually.");
 
                 break;
@@ -64,7 +68,14 @@ public class DungeonView extends View {
     }
 
     private void showCastle() {
-        CastleView showCastle = new CastleView();
-        char in = showCastle.getInput();
+         MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Castle);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
     }
 }
