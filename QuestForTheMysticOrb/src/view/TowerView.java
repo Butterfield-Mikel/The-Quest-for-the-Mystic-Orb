@@ -22,7 +22,7 @@ public class TowerView extends View {
         "Blacksmith",
         "Bridge",
         "Castle",
-        "Cave",
+        //"Cave",
         "Crossroads",
         "Deep Westland Woods",
         "Docks",
@@ -30,10 +30,10 @@ public class TowerView extends View {
         "Enchanted Garden",
         "Farm",
         "Gallows",
-        "Gazebo",
+        //"Gazebo",
         "Kitchen",
         "North Kingdom",
-        "River",
+        //"River",
         "Sea",
         "Ship",
         "Shoppe",
@@ -44,7 +44,7 @@ public class TowerView extends View {
     
 
     public TowerView() {
-        super("You enter the tallest tower in the kingdom. Even if \n"
+        super("You are in the tallest tower in the kingdom. Even if \n"
                 + "you don’t find anything useful up here you still  \n"
                 + "needed the exercise. In the tower you can look \n"
                 + "out at the entire kingdom and the land surrounding  \n"

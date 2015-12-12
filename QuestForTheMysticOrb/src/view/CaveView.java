@@ -17,10 +17,10 @@ import model.Player;
 public class CaveView extends View {
    
     public CaveView() {
-        super("As you are walking throught the forest you notice that there is a cave. \n"
+        super("You find yourself in a forest and you notice that there is a cave. \n"
         + "as you enter the cave you have the feeling that this might be a bad idea,  \n"
-        + "but teh spirit of adventure is strong \n"
-        + "What should you do (C)ontinue deeper into the cave, or (R)eturn to the safety of the woods.  "
+        + "but teh spirit of adventure is strong. \n"
+        + "What should you do? (C)ontinue deeper into the cave, or (R)eturn to the safety of the woods.  "
         );
     
     }
@@ -29,11 +29,11 @@ public class CaveView extends View {
         
         switch(input) {
             case 'C' :
-                System.out.println("You decide to head deeper in to the cave");
+               // System.out.println("You decide to head deeper in to the cave");
                 showDeepCave();
                 break;
             case 'R' :
-                System.out.println("You decied that risk is not worth it, and to return to the woods.");
+               // System.out.println("You decied that risk is not worth it, and to return to the woods.");
                 showDeepWestlandWoods();
                 break;
             default:

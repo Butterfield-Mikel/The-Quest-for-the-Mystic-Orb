@@ -17,14 +17,14 @@ import model.Player;
 public class FarmView extends View {
 
     public FarmView() {
-        super("You see a big farm with a small farm house. n/"
-                + "Inside the house you see an old farmer and n/"
-                + "his wife. They both look hungry, but not as /n"
-                + "they have some corn saved from last year’s n/"
-                + "harvest. You really want some of this corn, n/"
-                + "so the farmer tells you that if you will (H)help /n"
-                + "him measure his farm for seed he will give you /n"
-                + "some corn. The only place you can go is to /n"
+        super("You see a big farm with a small farm house. \n"
+                + "Inside the house you see an old farmer and \n"
+                + "his wife. They both look hungry, but not as \n"
+                + "they have some corn saved from last year’s \n"
+                + "harvest. You really want some of this corn, \n"
+                + "so the farmer tells you that if you will (H)help \n"
+                + "him measure his farm for seed he will give you \n"
+                + "some corn. The only place you can go is to \n"
                 + "the (S)outh kingdom.  ");
     }
 

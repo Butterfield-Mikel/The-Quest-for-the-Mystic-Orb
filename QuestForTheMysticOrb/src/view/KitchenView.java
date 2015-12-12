@@ -5,6 +5,11 @@
  */
 package view;
 
+import byui.cit260.questforthemysticorb.MapControl;
+import model.Game;
+import model.LocationType;
+import model.Player;
+
 /**
  *
  * @author mannj14
@@ -13,18 +18,10 @@ public class KitchenView extends View {
 
     public KitchenView() {
         super(
-                "\n++++++++++++++++++++++++++++"
-                + "\nYou have entered the castle kitchen"
-                + "\nIn the kitchen you see a knife, a bucket, and some meat"
-                + "\nyou wonder if any of these items would be useful as you embark on this quest."
-                + "\nthe only exit is the one you just came in that will return you to the castle."
-                + "\n++++++++++++++++++++"
-                + "\nYou have the following choices:"
-                + "\nK-- Get a Knife"
-                + "\nB-- Get a Bucket"
-                + "\nM-- Get some meat"
-                + "\nR-- Return to the Castle"
-                + "\nH-- View the games help menu"
+                "\nYou are in the castle's kitchen."
+                + "\nThe kitchen is a mess, and it smells really bad."
+                + "\nYou should go back to the main floor of the (C)astle"
+                + "where it doesn't smell so bad."
         );
     }
 
@@ -33,26 +30,26 @@ public class KitchenView extends View {
     public boolean doAction(char input) {
 
         switch (input) {
-            case 'K':
-                System.out.println("You Took a Knife");
-                break;
-            case 'B':
-                System.out.println("You now have a bucket");
-                break;
-            case 'M':
-                System.out.println("Congrats, you now have a hunk of raw meat...");
-                break;
-            case 'R':
-                System.out.println("You have returned to the main castle");
-                break;
-            case 'H':
-                System.out.println("Display Help Menu");
-                break;
+            case 'C':
+                showCastle();
+                break;           
             default:
                 System.out.println("ERROR ON INPUT");
 
         }
-        
+
         return true;
+    }
+    
+     private void showCastle() {
+        MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Castle);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
     }
 }

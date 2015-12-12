@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 package view;
+import byui.cit260.questforthemysticorb.MapControl;
+import model.Game;
+import model.LocationType;
+import model.Player;
 import view.ItemsView;
 /**
  *
@@ -40,11 +44,22 @@ public class MapView extends View {
 
      
         do {
-
+             System.out.println("+---+---+---+---+---+---+---+---+ \n"
+        + "|---+---+---+TWR+---+---+---+---| \n"
+        + "|---+---+KCN+CST+DNG+---+---+---| \n"
+        + "|---+---+GLW+NKD+SOP+---+---+---| \n"
+        + "|---+---+BST+SKD+FRM+---+---+---| \n"
+        + "|---+---+WWD+XRD+BDG+GDN+---+---| \n"
+        + "|---+---+DWD+DOC+---+---+---+---| \n"
+        + "|---+---+---+SEA+---+---+---+---| \n"
+        + "|---+---+---+SHP+---+---+---+---| \n"
+        + "|---+---+---+---+---+---+---N---| \n"
+        + "|---+---+---+---+---+---+-W-+-E-| \n"
+        + "+---+---+---+---+---+---+---S---+ \n");
             System.out.println("TWR=Tower KCN=Kitchen CST=Castle DNG=Dungeon GLW=Gallows NKD=North Kingdom");
             System.out.println("SHP=Ship BST=Blacksmith SKD=South Kingdom FRM=Farm WWD=Westland Woods XRD=Crossroads");
-            System.out.println("BDG=Bridge GDN=Garden DWD=Deep Westland Woods MAN=Mystic Who Warns GZB=Gazebo");
-            System.out.println("CAV=Cave DOC=Docks DCV=Deep Cave SEA=Sea BCH=Beach PIR=Pirates SOD=Ship SHK=Shark");
+            System.out.println("BDG=Bridge GDN=Garden DWD=Deep Westland Woods MAN=Mystic Who Warns ");
+            System.out.println(" DOC=Docks SEA=Sea BCH=Beach SOP=Shoppe PIR=Pirates SOD=Ship SHK=Shark");
             System.out.println("Press (T) to return to the tower. Also, you can (P)rint the items you see to an external file.");
             keyCount++;
 
@@ -73,8 +88,15 @@ public class MapView extends View {
     }
 
     private void showTower() {
-        TowerView showTower = new TowerView();
-        char in = showTower.getInput();
+         MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Tower);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
     }
     
     private void saveItems() {

@@ -20,9 +20,9 @@ public class DungeonView extends View {
     //map[1][2].Dungeon();
 
     public DungeonView() {
-        super("You walk down the stars into Ye Olde Dungeon. (see what I did there?) \n"
+        super("You find yourself in Ye Olde Dungeon. (see what I did there?) \n"
                 + "Looking around you notice a guard, and four cells. The guard has a big mustaache \n"
-                + "and his name is Frank. How do you know his name is Frank? You don't you decided \n"
+                + "and his name is Frank. How do you know his name is Frank? You don't, you decided \n"
                 + "to name him that when you were walking down the stairs. \n"
                 + "So what would you like to do in this dark, abysmal dungeon? Your only real \n"
                 + "options are to go back to the (C)astle, (T)alk to the guard, or (L)ook \n"
@@ -49,8 +49,8 @@ public class DungeonView extends View {
                         + "like a school girl. You immediatly regret all the decisions in your \n"
                         + "life that have brought you to this point.");
                 System.out.println("*********************************************************************\n"
-                        + "Frank wants you to guess the number in his head. It's only between 1-5, so you \n"
-                        + "should get it eventually.");
+                        + "Frank tells you that he is just kidding and lets you go. \n"
+                        + " ");
 
                 break;
             default:

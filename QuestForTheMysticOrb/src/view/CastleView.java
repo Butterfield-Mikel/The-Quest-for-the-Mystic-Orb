@@ -24,8 +24,8 @@ public class CastleView extends View {
 
     public CastleView() {
 
-        super("You stand there, alone in the Castle. Looking around the room, you see a \n"
-                + "(B)ucket on the floor. It might come in handy, you never know. Or you \n"
+        super("You stand there, alone in the Castle. Looking around the room, Maybe you can \n"
+                + "something like a (B)ucket on the floor. That might be handy. Or you \n"
                 + "might be stuck awkwardly carrying a bucket around the whole game, your call.\n"
                 + " \n"
                 + "Obvious exits from here are the (T)OWER, (D)UNGEON, (K)ITCHEN, and (N)ORTH KINGDOM. \n"

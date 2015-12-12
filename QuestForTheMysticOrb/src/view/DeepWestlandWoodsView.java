@@ -17,21 +17,21 @@ import model.Player;
 public class DeepWestlandWoodsView extends View {
     
     public DeepWestlandWoodsView() {
-        super("You have entered the Deep Westland Woods, it seems rather dark and scary \n"
-        + "As you look deeper into the woods you see what apears to be a wooden box of some kind \n"
-        + "you realize that you really only have two choices at this point. \n"
-        + "You can (A)proach the box and perhaps loose a limb, or you can (R)un back to the Westland Woods \n"
-        + "like a scared little girl.");        
+        super("You are in the Deep Westland Woods, it seems rather dark and scary. \n"
+        + "As you look deeper into the woods you see what apears to be an orb of some kind. \n"
+        + "At last!! You know that it is the orb that you have been questing for. \n"
+        + "You can (A)proach the orb and take it, or you can (R)un back to the Westland Woods. \n"
+       );        
     }
     @Override
     public boolean doAction(char input) {
         
         switch(input) {
             case 'A' :
-                System.out.println("You have reached the orb, now how to we solve this combination");
+               
                 break;
             case 'R' :
-                System.out.println("You Chicken");
+                
                 showWestlandWoods();
                 break;
             default:

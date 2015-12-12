@@ -12,41 +12,42 @@ import model.Player;
 
 /**
  *
- * @author mannj14
+ * @author Mikel
  */
-public class BeachView extends View {
-    
-    public BeachView() {
-        super("You find yourself at the beach. There is not much here other than \n"
-        + "some sand and water. Your only option is to go back to the (D)ocks \n");
+public class GallowsView extends View {
+
+    public GallowsView() {
+        super("At the gallows you are fortunate enough to \n"
+                + "Be here betweem beheadings. It smells really \n"
+                + "nice. The only place to go is the (N)orth \n"
+                + "Kingdom.");
                
-        
     }
+
+    /**
+     * @param input
+     *
+     * @return
+     */
     @Override
     public boolean doAction(char input) {
-        
-        switch(input) {
-            case 'D' :
-                showDocks();
-                break;
-            default:
-                System.out.println("ERROR ON INPUT");
-            }
+        switch (input) {
+            case 'N':
+              showNorthKingdom();  
+        }
         return true;
     }
-    
-    private void showDocks() {
-    MapControl mc = new MapControl();
+
+    private void showNorthKingdom() {
+         MapControl mc = new MapControl();
         Player p = Game.getInstance().getPlayer();
         try {
-            mc.moveLocation(p, LocationType.Docks);
+            mc.moveLocation(p, LocationType.NorthKingdom);
         } catch(Exception e) {
             e.printStackTrace();
         }
         
         p.getLocation().getLocationView().display();
     }
-    
-    
-}
 
+}

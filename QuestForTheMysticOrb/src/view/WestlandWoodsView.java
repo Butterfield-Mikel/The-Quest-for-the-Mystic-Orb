@@ -21,7 +21,7 @@ public class WestlandWoodsView extends View {
                 + "Great job at that by the way.\n"
                 + "There's a lot of trees here, but you are still close enough to see the town.\n"
                 + "Seriously, there is not a lot to do here, you should probably keep going into the (D)eep Westland Woods \n"
-                + ", or just head back to the (C)rossroads./n"
+                + ", or just head back to the (C)rossroads.\n"
                 + "So what will it be.");
     }
     

@@ -17,10 +17,9 @@ import model.Player;
 public class DeepCaveView extends View {
     
     public DeepCaveView() {
-     super("You enter the deepest part of the cave \n"
-        + "If you took the cave from the gallows you are ok because you can see. \n"
-        + "If not a monster comes out the shadows and since you can't see anything it kills you \n"
-        + "If you survive the monster attack, your only option is to (R)eturn to the less deep part of the cave"     
+     super("You find yourself in the deepest part of the cave. \n"
+        + "It is dark and cold in here, and you get a funny feeling. \n"
+        + "The cave came to an end so you can (R)eturn to the enterance of the cave"     
         );
     
     }
@@ -28,9 +27,7 @@ public class DeepCaveView extends View {
     public boolean doAction(char input) {
         
         switch(input) {
-            case 'R' :
-                System.out.println("You decide that there isn't much going on down here, \n"
-                        + "and head back to the cave.");
+            case 'R' :               
                 showWestlandWoods();
                 break;
             default:

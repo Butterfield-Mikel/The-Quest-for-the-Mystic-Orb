@@ -17,10 +17,9 @@ import model.Player;
 public class DocksView extends View {
     //map[5][1].Castle();
     public DocksView() {
-        super("You keep walking until you get to the end of the dock. \n"
+        super("You are standing on the docks. \n"
                 + "There is a great (S)ea out there to go exploring about in, \n"
                 + "if that is the sort of thing you are into. \n"
-                + " n/"
                 + "Then again, if you did bother to bring that bucket with you, \n"
                 + "there is (W)ater here so you could fill it with water. You better \n"
                 + "find a use for it quick though, if you thought carrying an empty \n"

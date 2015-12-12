@@ -18,15 +18,12 @@ public class CrossroadsView extends View {
     
  public CrossroadsView() {
         super("Oh dear, now you have to make the tough decision \n"
-                + "which way should you go \n"
-                + "You have four options \n"
+                + "which way should you go. \n"
+                + "You see a sign that gives you four options. It says \n"
                 + "Head (N)orth to the South Kingdom \n"
                 + "Head (E)ast to the bridge \n"
                 + "Head (S)outh to the Docks \n"
-                + "Head (W)est to the Westland Woods. \n"
-                + "As you are pondering the which direction to travel \n"
-                + "an old women appears from the shadows \n"
-                + "If you would like you can (T)alk to her.");
+                + "Head (W)est to the Westland Woods. \n");
     
     }
     @Override
@@ -34,23 +31,23 @@ public class CrossroadsView extends View {
         
         switch(input) {
             case 'N' :
-                System.out.println("You decide to return to the South Kingdom.");
+                //System.out.println("You decide to return to the South Kingdom. \n");
                 showSouthKingdom();
                 break;
             case 'E' :
-                System.out.println("You decide to head to the bridge/");
+                //System.out.println("You decide to head to the bridge \n");
                 showBridge();
                 break;
             case 'S' :
-                System.out.println("You decide that a walk down to the Dock might be relaxing /n");
+                //System.out.println("You decide that a walk down to the Dock might be relaxing \n");
                 showDocks();
                 break;
             case 'W' :
-                System.out.println("You have entered the Westland Woods n/");
+                //System.out.println("You have entered the Westland Woods \n");
                 showWestlandWoods();
                 break;
             case 'T' :
-                System.out.println("You talk to the Mystic, she warns you to avoid Boats this month/");
+               //System.out.println("You talk to the Mystic, she warns you to avoid Boats this month \n");
                 break;    
             default:
                 System.out.println("ERROR ON INPUT");

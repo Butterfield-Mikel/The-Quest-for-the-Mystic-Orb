@@ -17,7 +17,7 @@ import model.Player;
 public class NorthKingdomView extends View {
     
     public NorthKingdomView() {
-        super("Walking outside into the North Kingdom, you see some friendly \n"
+        super("You are outside the castle at the North Kingdom, you see some friendly \n"
                 + "looking (G)allows, and a dark and dreary (S)hoppe. Scratch that, \n"
                 + "the Shoppe is friendly and the Gallows are dark. You can go check \n"
                 + "out either one, or keep going to the South (K)ingdom. Then there \n"

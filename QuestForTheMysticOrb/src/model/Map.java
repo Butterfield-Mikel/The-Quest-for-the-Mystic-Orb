@@ -18,7 +18,8 @@ import view.DocksView;
 import view.DungeonView;
 import view.EnchantedGardenView;
 import view.FarmView;
-//import view.GallowsView;
+import view.GallowsView;
+import view.GazeboView;
 import view.KitchenView;
 import view.NorthKingdomView;
 import view.RiverView;
@@ -70,14 +71,14 @@ public class Map implements Serializable {
         map[1][2] = new Location(1, 2, "Dungeon", new DungeonView());
         locationList[LocationType.Dungeon.ordinal()] = map[1][2];
 
-    //   map[2][0] = new Location(2, 0, "Gallows", new GallowsView());
-    //   locationList[LocationType.Gallows.ordinal()] = map[2][0];
-        
+        map[2][0] = new Location(2, 0, "Gallows", new GallowsView());
+        locationList[LocationType.Gallows.ordinal()] = map[2][0];
+
         map[2][1] = new Location(2, 1, "NorthKingdom", new NorthKingdomView());
         locationList[LocationType.NorthKingdom.ordinal()] = map[2][1];
 
-        map[2][2] = new Location(2, 1, "Shoppe", new ShoppeView());
-        locationList[LocationType.Shoppe.ordinal()] = map[2][1];
+        map[2][2] = new Location(2, 2, "Shoppe", new ShoppeView());
+        locationList[LocationType.Shoppe.ordinal()] = map[2][2];
 
         map[3][0] = new Location(3, 0, "Blacksmith", new BlacksmithView());
         locationList[LocationType.Blacksmith.ordinal()] = map[3][0];
@@ -110,30 +111,26 @@ public class Map implements Serializable {
         locationList[LocationType.Docks.ordinal()] = map[5][1];
 
     //   map[5][2] = new Location(5, 2, "River", new RiverView());
-    //   locationList[LocationType.River.ordinal()] = map[5][2];
-        
-    //   map[5][3] = new Location(5, 3, "Gazebo", new GazeboView());
-    //   locationList[LocationType.Gazebo.ordinal()] = map[5][3];
-        
-        
+        //   locationList[LocationType.River.ordinal()] = map[5][2];
+        map[5][3] = new Location(5, 3, "Gazebo", new GazeboView());
+        locationList[LocationType.Gazebo.ordinal()] = map[5][3];
+
         map[6][0] = new Location(6, 0, "DeepCave", new DeepCaveView());
         locationList[LocationType.DeepCave.ordinal()] = map[6][0];
 
         map[6][1] = new Location(6, 1, "Sea", new SeaView());
         locationList[LocationType.Sea.ordinal()] = map[6][1];
-        
+
         map[6][2] = new Location(6, 2, "Beach", new BeachView());
         locationList[LocationType.Beach.ordinal()] = map[6][2];
-        
+
     //    map[7][0] = new Location(7, 0, "WestSea", new WestSeaView());
-    //    locationList[LocationType.WestSea.ordinal()] = map[7][0];
-        
+        //    locationList[LocationType.WestSea.ordinal()] = map[7][0];
         map[7][1] = new Location(7, 1, "Ship", new ShipView());
         locationList[LocationType.Ship.ordinal()] = map[7][1];
-        
+
     //    map[7][2] = new Location(7, 2, "EastSea", new EastSeaView());
-    //    locationList[LocationType.EastSea.ordinal()] = map[7][2];
-        
+        //    locationList[LocationType.EastSea.ordinal()] = map[7][2];
     }
 
     public Location getStartingLocation() {

@@ -15,7 +15,7 @@ import model.EnchantedApple;
 import model.Game;
 import model.Location;
 import model.Player;
-//import view.GallowsView;
+import view.GallowsView;
 import view.MainMenuView;
 import view.WelcomeView;
 import view.CastleView;

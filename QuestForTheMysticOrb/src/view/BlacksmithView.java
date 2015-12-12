@@ -34,15 +34,7 @@ public class BlacksmithView extends View {
         switch (input) {
             case 'S':
                 showSouthKingdom();
-                break;
-            
-            /*
-            case 'G':
-                Need to make it so you can get the gauntlets by trading the corn for it,
-                if corn.Items = true
-                    sout "You trade your corn for the gauntlets."
-                else sout "This guy is running a business, he isn't just going to give away his merchandise. His wife would kill him! "
-        */
+                break;                
             default:
                 System.out.println("ERROR ON INPUT");
                 break;
