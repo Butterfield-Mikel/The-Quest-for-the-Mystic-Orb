@@ -33,12 +33,12 @@ public class GazeboView extends View {
     public boolean doAction(char input) {
         switch (input) {
             case 'E':
-              showNorthKingdom();  
+              showEnchantedGarden();
         }
         return true;
     }
 
-    private void showNorthKingdom() {
+    private void showEnchantedGarden() {
          MapControl mc = new MapControl();
         Player p = Game.getInstance().getPlayer();
         try {

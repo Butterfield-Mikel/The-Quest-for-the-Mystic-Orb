@@ -22,7 +22,7 @@ public class FarmView extends View {
                 + "his wife. They both look hungry, but not as \n"
                 + "they have some corn saved from last year’s \n"
                 + "harvest. You really want some of this corn, \n"
-                + "so the farmer tells you that if you will (H)help \n"
+                + "so the farmer tells you that if you will (H)elp \n"
                 + "him measure his farm for seed he will give you \n"
                 + "some corn. The only place you can go is to \n"
                 + "the (S)outh kingdom.  ");

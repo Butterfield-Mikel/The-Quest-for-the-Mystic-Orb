@@ -18,7 +18,7 @@ public class BeachView extends View {
     
     public BeachView() {
         super("You find yourself at the beach. There is not much here other than \n"
-        + "some sand and water. Your only option is to go back to the (D)ocks \n");
+        + "some sand and water. You can go back to the (D)ocks, or take a (S)wim. \n");
                
         
     }
@@ -28,6 +28,14 @@ public class BeachView extends View {
         switch(input) {
             case 'D' :
                 showDocks();
+                break;
+            case 'S' :
+                System.out.println("Against your better judgement you decide that swimming is an important"
+                        + "n/ thing for you to start doing. Did I forget to tell you that these are eel"
+                        + "n/ infested waters? Like the ones in A Princess Bride. Only problem is that"
+                        + "n/ you don't have anyone to save you. Long story short, you are eaten."
+                        + "n/"
+                        + "n/ They wanted me to tell you that you were delicous. Game over");
                 break;
             default:
                 System.out.println("ERROR ON INPUT");

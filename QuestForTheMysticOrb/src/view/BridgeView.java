@@ -53,7 +53,7 @@ public class BridgeView extends View {
     }
 
     private void showCrossroads() {
-   MapControl mc = new MapControl();
+        MapControl mc = new MapControl();
         Player p = Game.getInstance().getPlayer();
         try {
             mc.moveLocation(p, LocationType.Crossroads);
@@ -65,11 +65,19 @@ public class BridgeView extends View {
     }
 
     private void showRiver() {
-        System.out.println("On second thought, you don't want to get wet \n");
+        MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.River);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        p.getLocation().getLocationView().display();
     }
 
      private void showEnchantedGarden() {
-    MapControl mc = new MapControl();
+        MapControl mc = new MapControl();
         Player p = Game.getInstance().getPlayer();
         try {
             mc.moveLocation(p, LocationType.EnchantedGarden);

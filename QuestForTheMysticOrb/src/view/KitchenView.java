@@ -20,7 +20,7 @@ public class KitchenView extends View {
         super(
                 "\nYou are in the castle's kitchen."
                 + "\nThe kitchen is a mess, and it smells really bad."
-                + "\nYou should go back to the main floor of the (C)astle"
+                + "\nYou should go back to the main floor of the (C)astle "
                 + "where it doesn't smell so bad."
         );
     }

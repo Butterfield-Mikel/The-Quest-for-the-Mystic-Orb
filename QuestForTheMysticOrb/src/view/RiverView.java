@@ -9,12 +9,34 @@ package view;
  *
  * @author mannj14
  */
-public class RiverView  {
+public class RiverView extends View {
        
-    public RiverView(){
-            System.out.println("You jumped in to a river, now you are dead");
-            showMainMenu();
+    public RiverView() {
+            super("You jumped in to a river. Not exactly a shining moment for you. n/"
+                    + "Do you want to try and (S)ave yourself? Or just (G)ive up?");
                
+    }
+    
+    /**
+     * @param input
+     *
+     * @return
+     */
+    @Override
+    public boolean doAction(char input) {
+        switch (input) {
+            case 'S':
+                System.out.println("You make a noble effort to get to shore but the current is just too strong."
+                        + "You should think twice before randomly jumping into a river. Game Over");
+                break;
+            case 'G':
+                System.out.println("Really? That's it for you? Game over, your died.");
+                break;
+            default:
+                System.out.println("ERROR ON INPUT");
+                break;
+        }
+        return true;
     }
     
     private void showMainMenu() {
