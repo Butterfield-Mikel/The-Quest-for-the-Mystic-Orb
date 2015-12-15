@@ -48,6 +48,16 @@ public class Player implements Serializable {
         this.name = name;
     }
 
+   public boolean hasItem(String itemName) {
+       for(Item i : items) {
+           if(i.getName().equals(itemName)) {
+               return true;
+           }
+       }
+       return false;
+   }
+    
+
     @Override
     public String toString() {
         return "Player{" + "name=" + name + '}';
@@ -74,4 +84,5 @@ public class Player implements Serializable {
         }
         return true;
     }
+
 }

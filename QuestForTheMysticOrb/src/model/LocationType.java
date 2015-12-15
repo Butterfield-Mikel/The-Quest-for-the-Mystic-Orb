@@ -35,5 +35,6 @@ public enum LocationType {
     Beach,
     WestSea,
     Ship,
-    EastSea;
+    EastSea,
+    King;
 }

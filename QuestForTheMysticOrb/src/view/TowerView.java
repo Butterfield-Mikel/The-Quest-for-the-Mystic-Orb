@@ -22,7 +22,7 @@ public class TowerView extends View {
         "Blacksmith",
         "Bridge",
         "Castle",
-        //"Cave",
+        
         "Crossroads",
         "Deep Westland Woods",
         "Docks",
@@ -30,10 +30,10 @@ public class TowerView extends View {
         "Enchanted Garden",
         "Farm",
         "Gallows",
-        //"Gazebo",
+        "Gazebo",
         "Kitchen",
         "North Kingdom",
-        //"River",
+        
         "Sea",
         "Ship",
         "Shoppe",

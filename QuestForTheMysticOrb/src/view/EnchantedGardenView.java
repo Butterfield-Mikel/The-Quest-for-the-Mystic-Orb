@@ -7,6 +7,7 @@ package view;
 
 import byui.cit260.questforthemysticorb.MapControl;
 import model.Game;
+import model.Item;
 import model.LocationType;
 import model.Player;
 
@@ -17,14 +18,10 @@ import model.Player;
 public class EnchantedGardenView extends View {
     //map[4][3].EnchantedGarden();
     public EnchantedGardenView() {
-        super("You get across the bridge into the Enchanted Garden. That is the ironic \n"
-                + "name that you give it, due to the face that it looks awful. All you \n"
-                + "see are dead trees, dirt, and dead grass. One tree looks like it could \n"
-                + "do something if it has some water, but you would be crazy if you were \n"
-                + "carrying a bucket of Water (Z) all this time. \n"
-                + "You also spy a nice looking Gazebo in the distance to the (S)outh. It looks pretty \n"
-                + "awesome as far as Gazebos go. \n"
-                + "You can also go back (W)est to the Bridge. \n"
+        super("You find yourself in an enchanted garden. \n"
+                + "You see an (A)pple tree that has a delicous looking \n"
+                + "apple. You can also (S)ee a gazebo in the garden \n"
+                + "or you can go back to the (B)ridge"
               );
     }
     
@@ -39,15 +36,11 @@ public class EnchantedGardenView extends View {
             case 'S' :
                 showGazebo();
                 break;
-            case 'W' :
+            case 'B' :
                 showBridge();
                 break;
-            case 'Z' :
-                System.out.println("You water the almost dead apple tree and it springs to life! \n"
-                        + "It magically grows a presumably magic apple for you to eat. You take \n"
-                        + "the apple and eat it without questioning it's origins because face it, \n"
-                        + "you are really hungry and the King didn't say anything about starving \n"
-                        + "while trying to save the Kingdom");
+            case 'A' :
+                getEnchantedApple();
                 break;
            
 
@@ -84,6 +77,16 @@ public class EnchantedGardenView extends View {
         
         p.getLocation().getLocationView().display();
         }
+        
+    private void getEnchantedApple() {
+        Item i = Game.getInstance().getItemByNameAndRemove("EnchantedApple");
+        if(i == null) {
+            System.out.println("You should finish your other apple before picking another.\n");
+            return;
+        }
+        Game.getInstance().getPlayer().getItems().add(i);
+        System.out.println("Take a bite of the apple and it makes you feel enchanted!\n");
+    }
 }
 
 

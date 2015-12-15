@@ -7,6 +7,7 @@ package view;
 
 import byui.cit260.questforthemysticorb.MapControl;
 import model.Game;
+import model.Item;
 import model.LocationType;
 import model.Player;
 
@@ -37,14 +38,8 @@ public class FarmView extends View {
     public boolean doAction(char input) {
         switch (input) {
             case 'H':
-                System.out.println("You go out to measure the farmer's farm. \n "
-                        + "You measure 8 acres long and 4 acres wide. \n"
-                        + "Now you need to go back and tell the farmer \n"
-                        + "How many square acres his farm is so he can \n"
-                        + "Buy the proper amount of seed to plant. \n"
-                        + "Maybe if you get it right he will give you some corn.  ");
-                
-                // I am not sure where or how, but i need to implament a way to get test the users input and and the corn the the playrs inventory if it is correct.
+                getCorn();
+               
                 break;
             case 'S':
                 showSouthKingdom();
@@ -67,5 +62,19 @@ public class FarmView extends View {
         
         p.getLocation().getLocationView().display();
     }
+    
+    private void getCorn() {
+      
+    Item i = Game.getInstance().getItemByNameAndRemove("Corn");
+        if(i == null) {
+            System.out.println("You already helped the farmer!\n");
+            return;
+        }
+        Game.getInstance().getPlayer().getItems().add(i);
+        System.out.println("You help the farmer on his farm and you are rewarded with Corn.\n");
+    
+}
 
 }
+
+

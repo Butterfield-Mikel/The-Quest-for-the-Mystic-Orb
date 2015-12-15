@@ -20,9 +20,40 @@ public class ItemControl {
         
         Item bucket = new Item();
         bucket.setName("Bucket");
-        bucket.setDescription("Boring");
+        bucket.setDescription("Can hold Water");
         
         Game.getInstance().getAvailableItems().add(bucket);
+        
+        Item corn = new Item();
+        corn.setName("Corn");
+        corn.setDescription("Food");
+        
+        Game.getInstance().getAvailableItems().add(corn);
+        
+        Item gauntlets = new Item();
+        gauntlets.setName("Gauntlets");
+        gauntlets.setDescription("Protects hands");
+        
+        Game.getInstance().getAvailableItems().add(gauntlets);
+        
+        Item bucketOfWater = new Item();
+        bucketOfWater.setName("BucketOfWater");
+        bucketOfWater.setDescription("Wet");
+        
+        Game.getInstance().getAvailableItems().add(bucketOfWater);
+        
+        Item enchantedApple = new Item();
+        enchantedApple.setName("EnchantedApple");
+        enchantedApple.setDescription("Sweet");
+        
+        Game.getInstance().getAvailableItems().add(enchantedApple);
+        
+        Item mysticOrb = new Item();
+        mysticOrb.setName("MysticOrb");
+        mysticOrb.setDescription("Rejuvinating");
+        
+        Game.getInstance().getAvailableItems().add(mysticOrb);
+        
         
     }
     

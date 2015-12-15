@@ -20,6 +20,7 @@ import view.EnchantedGardenView;
 import view.FarmView;
 import view.GallowsView;
 import view.GazeboView;
+import view.KingView;
 import view.KitchenView;
 import view.NorthKingdomView;
 import view.RiverView;
@@ -131,6 +132,8 @@ public class Map implements Serializable {
 
     //    map[7][2] = new Location(7, 2, "EastSea", new EastSeaView());
         //    locationList[LocationType.EastSea.ordinal()] = map[7][2];
+         map[7][2] = new Location(7, 2, "King", new KingView());
+        locationList[LocationType.Ship.ordinal()] = map[7][2];
     }
 
     public Location getStartingLocation() {
@@ -165,6 +168,6 @@ public class Map implements Serializable {
      map[6][2] = new Beach();
      map[7][0] = new WestSea();
      map[7][1] = new Ship();
-     map[7][2] = new EastSea();
+     map[7][2] = new King();
      */
 }

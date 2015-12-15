@@ -75,8 +75,14 @@ public class SouthKingdomView extends View {
         }
         
         private void showBlacksmith() {
-         MapControl mc = new MapControl();
-        Player p = Game.getInstance().getPlayer();
+        MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer(); 
+        
+        if(!p.hasItem("Corn")) {
+            System.out.println("You go to the blacksmith's shop but he looks hungry and a litle mad. \nYou feel awkward and you walk away.");
+            return;
+        }
+        
         try {
             mc.moveLocation(p, LocationType.Blacksmith);
         } catch(Exception e) {

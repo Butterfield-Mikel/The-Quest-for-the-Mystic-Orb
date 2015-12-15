@@ -50,16 +50,16 @@ public class MapView extends View {
         + "|---+---+GLW+NKD+SOP+---+---+---| \n"
         + "|---+---+BST+SKD+FRM+---+---+---| \n"
         + "|---+---+WWD+XRD+BDG+GDN+---+---| \n"
-        + "|---+---+DWD+DOC+---+---+---+---| \n"
-        + "|---+---+---+SEA+---+---+---+---| \n"
+        + "|---+---+DWD+DOC+---+GZB+---+---| \n"
+        + "|---+---+---+SEA+BCH+---+---+---| \n"
         + "|---+---+---+SHP+---+---+---+---| \n"
         + "|---+---+---+---+---+---+---N---| \n"
         + "|---+---+---+---+---+---+-W-+-E-| \n"
         + "+---+---+---+---+---+---+---S---+ \n");
             System.out.println("TWR=Tower KCN=Kitchen CST=Castle DNG=Dungeon GLW=Gallows NKD=North Kingdom");
-            System.out.println("SHP=Ship BST=Blacksmith SKD=South Kingdom FRM=Farm WWD=Westland Woods XRD=Crossroads");
-            System.out.println("BDG=Bridge GDN=Garden DWD=Deep Westland Woods MAN=Mystic Who Warns ");
-            System.out.println(" DOC=Docks SEA=Sea BCH=Beach SOP=Shoppe PIR=Pirates SOD=Ship SHK=Shark");
+            System.out.println("SHP=Ship BST=Blacksmith SKD=South Kingdom FRM=Farm WWD=Westland Woods ");
+            System.out.println("BDG=Bridge GDN=Garden DWD=Deep Westland Woods GZB=Gazebo XRD=Crossroads");
+            System.out.println("DOC=Docks SEA=Sea BCH=Beach SOP=Shoppe SHP=Ship");
             System.out.println("Press (T) to return to the tower. Also, you can (P)rint the items you see to an external file.");
             keyCount++;
 

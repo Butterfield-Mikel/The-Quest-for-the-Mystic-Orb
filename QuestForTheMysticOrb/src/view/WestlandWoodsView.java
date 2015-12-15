@@ -17,12 +17,11 @@ import model.Player;
 public class WestlandWoodsView extends View {
     //map[4][0].WestlandWoods();
     public WestlandWoodsView() {
-        super("Somehow, the apple does the trick and you get yourself to the Westland Woods.\n"
-                + "Great job at that by the way.\n"
-                + "There's a lot of trees here, but you are still close enough to see the town.\n"
-                + "Seriously, there is not a lot to do here, you should probably keep going into the (D)eep Westland Woods \n"
-                + ", or just head back to the (C)rossroads.\n"
-                + "So what will it be.");
+        super("You are in the Westland Woods. There's a lot of trees here, \n"
+                + "but you are still close enough to see the town.\n"
+                + "Seriously, there is not a lot to do here, you should probably keep going  \n"
+                + "into the (D)eep Westland Woods or just head back to the (C)rossroads.\n"       
+                + "So what will it be?");
     }
     
         /**

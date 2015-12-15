@@ -17,10 +17,10 @@ import model.Player;
 public class SeaView extends View {
     
        public SeaView() {
-        super("You start to smell the crisp relaxing air of the sea, as you \n"
+        super("You stand next to the (B)each of the sea, as you \n"
                 + "start to relax you remember that you have a kingdom to \n"
                 + "save. In the distance you see a great sea. You see a  \n"
-                + "(S)hip with nobody on it, a (B)each, and some (D)ocks.");
+                + "(S)hip with nobody on it, a long (B)each, and some (D)ocks.");
     }
     
         /**
@@ -50,6 +50,12 @@ public class SeaView extends View {
         private void showBeach() {
       MapControl mc = new MapControl();
         Player p = Game.getInstance().getPlayer();
+        
+        if(!p.hasItem("Corn")) {
+            System.out.println("You go to the beach but there is nothing to do yet so you return to the sea. \n");
+            return;
+        }
+        
         try {
             mc.moveLocation(p, LocationType.Beach);
         } catch(Exception e) {

@@ -5,6 +5,11 @@
  */
 package view;
 
+import byui.cit260.questforthemysticorb.MapControl;
+import model.Game;
+import model.LocationType;
+import model.Player;
+
 /**
  *
  * @author Rich
@@ -12,13 +17,9 @@ package view;
 public class ShipView extends View {
     //map[7][1].Ship();
     public ShipView() {
-        super("You board the ship to make sure there aren’t any  \n"
-                + "pirates or anything like that. During your search  \n"
-                + "you start to question your own morals. I mean,  \n"
-                + "seriously, you just get one someone else’s ship? \n"
-                + "I bet they worked really hard for this! Well, the \n"
-                + "damage is done, so if you want you can swim back \n"
-                + "to the (S)ea and go to the beach from there, or \n"
+        super("You are on the ship and you are lucky that there aren't \n"
+                + "pirates or anything like that. That's lucky! \n"
+                + "You can swim back to the (S)ea and go to the beach from there, or \n"
                 + "you can sail (E)ast or (W)east to see where it takes you.");
     }
     
@@ -34,20 +35,10 @@ public class ShipView extends View {
                 showSea();
                 break;
             case 'E' :
-                System.out.println("You set sail to the east in hopes of finding the n/"
-                        + "orb that will save the kingdom. A huge shark n/"
-                        + "jumps out of the great waters and lands on n/"
-                        + "your ship. It swallows you whole. n/"
-                        + "Game over.");
+                System.out.println("You would like to set sail, but you are too weak to get \n the anchor off the sea floor. Do you even lift, bro?.");
                 break;
             case 'W' :
-                System.out.println("You set sail to the west in hopes of finding the n/"
-                        + "orb that will save the kingdom. You see a ship n/"
-                        + "approaching yours from the distance. OH NO, n/"
-                        + "they are flying the skull and crossbones flag! n/"
-                        + "PIRATES!!! The pirates board your ship, take n/"
-                        + "all your valuables, and end your life… n/"
-                        + "Game Over.");
+                System.out.println("You would like to set sail, but you are too weak to get \n the anchor off the sea floor. Do you even lift, bro?.");
                 break;        
             default:
                 System.out.println("ERROR ON INPUT");
@@ -57,18 +48,15 @@ public class ShipView extends View {
     }
     
         private void showSea() {
-        SeaView showSea = new SeaView();
-        char in = showSea.getInput();
+       MapControl mc = new MapControl();
+        Player p = Game.getInstance().getPlayer();
+        try {
+            mc.moveLocation(p, LocationType.Sea);
+        } catch(Exception e) {
+            e.printStackTrace();
         }
         
-/*
-        Need to implament some kind of game over method here. maybe just have something 
-        take you back to the main menu. I'll ask my group and get back to this. 
-        
-        private void showMainMenu() {
-        MainMenuView MainMenuSea = new MainMenuView();
-        char in = showMainMenu.getInput();
+        p.getLocation().getLocationView().display();
         }
         
-        */
 }

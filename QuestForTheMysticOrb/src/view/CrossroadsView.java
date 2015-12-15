@@ -71,6 +71,7 @@ public class CrossroadsView extends View {
         private void showBridge() {
         MapControl mc = new MapControl();
         Player p = Game.getInstance().getPlayer();
+        
         try {
             mc.moveLocation(p, LocationType.Bridge);
         } catch(Exception e) {
@@ -93,6 +94,12 @@ public class CrossroadsView extends View {
         private void showWestlandWoods() {
         MapControl mc = new MapControl();
         Player p = Game.getInstance().getPlayer();
+        
+         if(!p.hasItem("EnchantedApple")) {
+            System.out.println("As you approach the Westland Woods you feel consumed by dark magic. \nYou hear a dark voice that says *only the enchanted may enter.*\n");
+            return;
+        }
+        
         try {
             mc.moveLocation(p, LocationType.WestlandWoods);
         } catch(Exception e) {

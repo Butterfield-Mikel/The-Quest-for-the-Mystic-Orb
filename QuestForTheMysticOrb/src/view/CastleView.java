@@ -25,13 +25,12 @@ public class CastleView extends View {
     public CastleView() {
 
         super("You stand there, alone in the Castle. Looking around the room, Maybe you can \n"
-                + "something like a (B)ucket on the floor. That might be handy. Or you \n"
-                + "might be stuck awkwardly carrying a bucket around the whole game, your call.\n"
-                + " \n"
-                + "Obvious exits from here are the (T)OWER, (D)UNGEON, (K)ITCHEN, and (N)ORTH KINGDOM. \n"
-                + "I typed them in all caps to let you know they are important.\n"
-                + "**************************************************************************************\n"
-                + "What would you like to do (enter the first letter)?");
+                + "take one of a few (B)uckets that are on the floor. That might be handy. However, you \n"
+                + "might end up awkwardly carrying a bucket around the whole game, your call.\n"  
+                + "Obvious exits from here are the (T)ower, (D)ungeon, (K)itchen, and (N)north kingdom. \n"
+                + "Also, you can try to (V)isit the king."                             
+                + "What would you like to do? \n"
+                + "Please enter a single letter to preform an action. Action letters can be found above in parenthesis.");
     }
 
     @Override
@@ -53,6 +52,8 @@ public class CastleView extends View {
             case 'N':
                showNorthKingdom();
                 break;
+            case 'V':
+                showKing();
             default:
                 System.out.println("ERROR ON INPUT");
         }
@@ -61,7 +62,7 @@ public class CastleView extends View {
 
     private void showDungeon() {
         MapControl mc = new MapControl();
-        Player p = Game.getInstance().getPlayer();
+        Player p = Game.getInstance().getPlayer();                
         try {
             mc.moveLocation(p, LocationType.Dungeon);
         } catch(Exception e) {
@@ -106,7 +107,17 @@ public class CastleView extends View {
         
         p.getLocation().getLocationView().display();
     }
-
+    
+      private void showKing() {
+       Player p = Game.getInstance().getPlayer();
+           if(!p.hasItem("MysticOrb")) {
+            System.out.println("The king doesn't want to see you unless you have the mystic orb.");
+            return;
+    } else {
+               System.out.println("You win");
+           }
+               
+      }
     private void getBucket() {
         Item i = Game.getInstance().getItemByNameAndRemove("Bucket");
         if(i == null) {

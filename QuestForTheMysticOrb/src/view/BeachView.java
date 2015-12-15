@@ -7,6 +7,7 @@ package view;
 
 import byui.cit260.questforthemysticorb.MapControl;
 import model.Game;
+import model.Item;
 import model.LocationType;
 import model.Player;
 
@@ -18,7 +19,7 @@ public class BeachView extends View {
     
     public BeachView() {
         super("You find yourself at the beach. There is not much here other than \n"
-        + "some sand and water. You can go back to the (D)ocks, or take a (S)wim. \n");
+        + "some sand and water. You can go back to the (S)ea, or (F)ill your bucket with water. \n");
                
         
     }
@@ -26,16 +27,11 @@ public class BeachView extends View {
     public boolean doAction(char input) {
         
         switch(input) {
-            case 'D' :
-                showDocks();
-                break;
             case 'S' :
-                System.out.println("Against your better judgement you decide that swimming is an important"
-                        + "n/ thing for you to start doing. Did I forget to tell you that these are eel"
-                        + "n/ infested waters? Like the ones in A Princess Bride. Only problem is that"
-                        + "n/ you don't have anyone to save you. Long story short, you are eaten."
-                        + "n/"
-                        + "n/ They wanted me to tell you that you were delicous. Game over");
+                showSea();
+                break;
+            case 'F' : 
+                getBucketOfWater();
                 break;
             default:
                 System.out.println("ERROR ON INPUT");
@@ -43,16 +39,26 @@ public class BeachView extends View {
         return true;
     }
     
-    private void showDocks() {
+    private void showSea() {
     MapControl mc = new MapControl();
         Player p = Game.getInstance().getPlayer();
         try {
-            mc.moveLocation(p, LocationType.Docks);
+            mc.moveLocation(p, LocationType.Sea);
         } catch(Exception e) {
             e.printStackTrace();
         }
         
         p.getLocation().getLocationView().display();
+    }
+    
+    private void getBucketOfWater() {
+        Item i = Game.getInstance().getItemByNameAndRemove("BucketOfWater");
+        if(i == null) {
+            System.out.println("Your bicket is already full.\n");
+            return;
+        }
+        Game.getInstance().getPlayer().getItems().add(i);
+        System.out.println("You fill your bucket with water!\n");
     }
     
     

@@ -17,11 +17,11 @@ import model.Player;
 public class BridgeView extends View {
 
     public BridgeView() {
-        super("As you are walking you see a bridge. Unfortunately you \n"
+        super("You find yourself near a bridge. Unfortunately you \n"
                 + "cannot go further east without crossing the bridge.  \n"
-                + "he bridge is covered with a thorn bush. You could try \n"
-                + "to (M)ove the bush, but it looks like you might need \n"
-                + "something to help you. You can always turn back \n"
+                + "The bridge is covered with a thorn bush. You could try \n"
+                + "To cross and go to the (G)arden on the other side, but you \n"
+                + "might need something to help you. You can always turn back \n"
                 + "And go to the (C)rossroads or head down to the (R)iver.");
     }
 
@@ -33,11 +33,8 @@ public class BridgeView extends View {
     @Override
     public boolean doAction(char input) {
         switch (input) {
-            case 'M':
-                //if gloves.Items = false {
-                System.out.println("You try to move the bush but the thorns cut up your hands. n/"
-                        + "Too bad, I bet whatever is on the other side of this bridge is awesome.");
-                //} else { showEnchantedGardenView(); }
+            case 'G':
+                showEnchantedGarden();
                 break;
             case 'R':
                 showRiver();
@@ -79,6 +76,11 @@ public class BridgeView extends View {
      private void showEnchantedGarden() {
         MapControl mc = new MapControl();
         Player p = Game.getInstance().getPlayer();
+        
+        if(!p.hasItem("Gauntlets")) {
+            System.out.println("You try to move the bush so you can cross the bridge but \nyou just get your hands cut up.");
+            return;
+        }
         try {
             mc.moveLocation(p, LocationType.EnchantedGarden);
         } catch(Exception e) {
