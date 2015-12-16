@@ -17,9 +17,9 @@ import model.Player;
 public class ShipView extends View {
     //map[7][1].Ship();
     public ShipView() {
-        super("You swam to the ship and it looks old and run down. The "
-                + "sails are torn and the wood is splitting everywhere, it's a mess. "
-                + "You can swim (N)orth to the land by the sea or try to sail (W)est or (E)ast. ");
+        super("You swam to the ship and it looks old and run down. The \n"
+                + "sails are torn and the wood is splitting everywhere, it's a mess. \n"
+                + "You can swim (N)orth to the land by the sea or try to sail (W)est or (E)ast. \n");
     }
     
         /**
@@ -30,7 +30,7 @@ public class ShipView extends View {
     @Override
     public boolean doAction(char input) {
         switch(input) {
-            case 'S' :
+            case 'N' :
                 showSea();
                 break;
             case 'E' :

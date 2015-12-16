@@ -132,8 +132,7 @@ public class Map implements Serializable {
 
     //    map[7][2] = new Location(7, 2, "EastSea", new EastSeaView());
         //    locationList[LocationType.EastSea.ordinal()] = map[7][2];
-         map[7][2] = new Location(7, 2, "King", new KingView());
-        locationList[LocationType.Ship.ordinal()] = map[7][2];
+         
     }
 
     public Location getStartingLocation() {

@@ -22,7 +22,6 @@ public class TowerView extends View {
         "Blacksmith",
         "Bridge",
         "Castle",
-        
         "Crossroads",
         "Deep Westland Woods",
         "Docks",
@@ -33,7 +32,6 @@ public class TowerView extends View {
         "Gazebo",
         "Kitchen",
         "North Kingdom",
-        
         "Sea",
         "Ship",
         "Shoppe",
@@ -70,7 +68,7 @@ public class TowerView extends View {
                  case 'L':    
                      //This should calculate the length of the array. 
             for (int i = 0; i < locations.length; i++) 
-            System.out.println("You see " + i + " locations.");      
+            System.out.println("You see " + (i+1) + " locations.");      
                 break;
             default:
                 System.out.println("ERROR ON INPUT");
