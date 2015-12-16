@@ -13,7 +13,7 @@ import model.Player;
 
 /**
  *
- * @author mannj14
+ * @author Mikel
  */
 public class BeachView extends View {
     

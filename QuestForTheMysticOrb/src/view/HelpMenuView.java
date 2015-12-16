@@ -22,8 +22,9 @@ public class HelpMenuView {
     public void displayMenu() {
         System.out.println("Welcome to the Quest for the Mystic Orb. This is a simple text-based game where you type the "
                 + "\ndisplayed commands and use the enter key to execute the command you typed. Common commands "
-                + "\nwill be given away parenthesis. For example, you can type the letter q and press enter to \n (Q)uit to the main menu.");
-        System.out.println("Q - quit to the main menu");
+                + "\nwill be given away parenthesis. For example, you can type the letter q and press enter to \n (Q)uit to the main menu."
+                + "\nThe most common commands will be n s e and w for moving north south east and west.");
+       
         
     
     }
