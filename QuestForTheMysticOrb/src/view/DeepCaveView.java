@@ -17,9 +17,7 @@ import model.Player;
 public class DeepCaveView extends View {
     
     public DeepCaveView() {
-     super("You find yourself in the deepest part of the cave. \n"
-        + "It is dark and cold in here, and you get a funny feeling. \n"
-        + "The cave came to an end so you can (R)eturn to the enterance of the cave"     
+     super("This location no longer exists.  " 
         );
     
     }

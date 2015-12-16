@@ -18,9 +18,9 @@ public class GallowsView extends View {
 
     public GallowsView() {
         super("At the gallows you are fortunate enough to \n"
-                + "Be here betweem beheadings. It smells really \n"
-                + "nice. The only place to go is the (N)orth \n"
-                + "Kingdom.");
+                + "be here betweem beheadings. It smells really \n"
+                + "nice compared to the usual smell of execution. The only place to go \n"
+                + "is (E)ast to the northern end of the kingdom.");
                
     }
 
@@ -32,7 +32,7 @@ public class GallowsView extends View {
     @Override
     public boolean doAction(char input) {
         switch (input) {
-            case 'N':
+            case 'E':
               showNorthKingdom();  
         }
         return true;

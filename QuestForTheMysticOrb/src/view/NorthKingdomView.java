@@ -17,11 +17,11 @@ import model.Player;
 public class NorthKingdomView extends View {
     
     public NorthKingdomView() {
-        super("You are outside the castle at the North Kingdom, you see some friendly \n"
-                + "looking (G)allows, and a dark and dreary (S)hoppe. Scratch that, \n"
-                + "the Shoppe is friendly and the Gallows are dark. You can go check \n"
-                + "out either one, or keep going to the South (K)ingdom. Then there \n"
-                + "is always going back into the (C)astle.");
+        super("You are outside the castle at the north end of the kingdom. (W)est there are \n"
+                + "some gallows and there is a shop to the (E)ast. You can also go \n"
+                + "(N)orth to the castle or (S)outh to the southen end of the kingdom. \n"
+            
+);
     }
     
         /**
@@ -32,16 +32,16 @@ public class NorthKingdomView extends View {
     @Override
     public boolean doAction(char input) {
         switch(input) {
-            case 'S' :
+            case 'E' :
                 showShoppe();
                 break;
-            case 'G' :
+            case 'W' :
                 showGallows();
                 break;
-            case 'K' :
+            case 'S' :
                 showSouthKingdom();
                 break;
-            case 'C' :
+            case 'N' :
                 showCastle();
                 break;
             default:

@@ -19,7 +19,7 @@ public class BeachView extends View {
     
     public BeachView() {
         super("You find yourself at the beach. There is not much here other than \n"
-        + "some sand and water. You can go back to the (S)ea, or (F)ill your bucket with water. \n");
+        + "some sand and water. You can go (W)est to the sea, or (F)ill your bucket with water. \n");
                
         
     }
@@ -27,7 +27,7 @@ public class BeachView extends View {
     public boolean doAction(char input) {
         
         switch(input) {
-            case 'S' :
+            case 'W' :
                 showSea();
                 break;
             case 'F' : 

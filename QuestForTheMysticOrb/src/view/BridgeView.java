@@ -17,12 +17,12 @@ import model.Player;
 public class BridgeView extends View {
 
     public BridgeView() {
-        super("You find yourself near a bridge. Unfortunately you \n"
-                + "cannot go further east without crossing the bridge.  \n"
-                + "The bridge is covered with a thorn bush. You could try \n"
-                + "To cross and go to the (G)arden on the other side, but you \n"
-                + "might need something to help you. You can always turn back \n"
-                + "And go to the (C)rossroads or head down to the (R)iver.");
+        super("You find yourself near a bridge that is covered in a \n"
+                + "Thck thorn bush. On the other side of the bridge to the \n"
+                + "(E)ast is an enchanted garden. However, the thorn bush \n"
+                + "might make it hard to cross. You can also go back (W)est \n"
+                + "to the Crossroads."
+        );
     }
 
     /**
@@ -33,13 +33,10 @@ public class BridgeView extends View {
     @Override
     public boolean doAction(char input) {
         switch (input) {
-            case 'G':
+            case 'E':
                 showEnchantedGarden();
-                break;
-            case 'R':
-                showRiver();
-                break;
-            case 'C':
+                break;            
+            case 'W':
                 showCrossroads();
                 break;
             default:
@@ -54,18 +51,6 @@ public class BridgeView extends View {
         Player p = Game.getInstance().getPlayer();
         try {
             mc.moveLocation(p, LocationType.Crossroads);
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-        
-        p.getLocation().getLocationView().display();
-    }
-
-    private void showRiver() {
-        MapControl mc = new MapControl();
-        Player p = Game.getInstance().getPlayer();
-        try {
-            mc.moveLocation(p, LocationType.River);
         } catch(Exception e) {
             e.printStackTrace();
         }

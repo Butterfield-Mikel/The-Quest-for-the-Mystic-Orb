@@ -20,13 +20,9 @@ public class DungeonView extends View {
     //map[1][2].Dungeon();
 
     public DungeonView() {
-        super("You find yourself in Ye Olde Dungeon. (see what I did there?) \n"
-                + "Looking around you notice a guard, and four cells. The guard has a big mustaache \n"
-                + "and his name is Frank. How do you know his name is Frank? You don't, you decided \n"
-                + "to name him that when you were walking down the stairs. \n"
-                + "So what would you like to do in this dark, abysmal dungeon? Your only real \n"
-                + "options are to go back to the (C)astle, (T)alk to the guard, or (L)ook \n"
-                + "inside one of the cells.");
+        super("You have found the castle’s secret dungeon. It is very cold and sad \n"
+                + "in here. You hear prisoners cry to you to let them out. You see a \n"
+                + "(G)uard that you can talk to, or you can  go back (W)est to the castle.");
 
     }
 
@@ -34,25 +30,14 @@ public class DungeonView extends View {
     public boolean doAction(char input) {
 
         switch (input) {
-            case 'C':
+            case 'W':
                 System.out.println("You decide that there isn't much going on down here, \n"
                         + "and head back to the castle.");
                 showCastle();
                 break;
-            case 'T':
-                System.out.println("You attempt a conversation with the guard and ask him \n"
-                        + "his name. He says it's Frank. What were the odds?");
-                break;
-            case 'L':
-                System.out.println("Like an idiot you walk into the nearest cell and look \n"
-                        + "around. Your hear the door slam shut behind you and Frank giggles \n"
-                        + "like a school girl. You immediatly regret all the decisions in your \n"
-                        + "life that have brought you to this point.");
-                System.out.println("*********************************************************************\n"
-                        + "Frank tells you that he is just kidding and lets you go. \n"
-                        + " ");
-
-                break;
+            case 'G':
+                System.out.println("You approach the guard and he tells you to leave because you are in a restricted area.");
+                break;              
             default:
                 System.out.println("ERROR ON INPUT");
 

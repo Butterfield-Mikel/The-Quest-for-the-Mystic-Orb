@@ -50,7 +50,7 @@ public class TowerView extends View {
                 + "out at the entire kingdom and the land surrounding  \n"
                 + "It. You can (L)ook around and count the locations. \n"
                 + "There is a (M)ap on the table. You don’t see anything \n"
-                + "Else so you can go back (D)ownstairs to the main castle. ");
+                + "Else so you can go (S)outh downstairs to the main castle. ");
     }
 
     /**
@@ -64,11 +64,10 @@ public class TowerView extends View {
             case 'M':
                 showMap();
                 break;
-             case 'D':
+             case 'S':
                 showCastle();
                 break;
                  case 'L':    
-                     
                      //This should calculate the length of the array. 
             for (int i = 0; i < locations.length; i++) 
             System.out.println("You see " + i + " locations.");      

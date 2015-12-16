@@ -12,18 +12,18 @@ import model.Player;
 
 /**
  *
- * @author mannj14
+ * @author Mikel
  */
 public class CrossroadsView extends View {
     
  public CrossroadsView() {
-        super("Oh dear, now you have to make the tough decision \n"
-                + "which way should you go. \n"
-                + "You see a sign that gives you four options. It says \n"
-                + "Head (N)orth to the South Kingdom \n"
-                + "Head (E)ast to the bridge \n"
-                + "Head (S)outh to the Docks \n"
-                + "Head (W)est to the Westland Woods. \n");
+        super("You find yourself at a crossroad. Also, there is an old wood \n"
+                + "street sign that reads \n"
+              
+                + " (N)orth to the South Kingdom \n"
+                + " (E)ast to the bridge \n"
+                + " (S)outh to the Docks \n"
+                + " (W)est to the Westland Woods. \n");
     
     }
     @Override
@@ -96,7 +96,7 @@ public class CrossroadsView extends View {
         Player p = Game.getInstance().getPlayer();
         
          if(!p.hasItem("EnchantedApple")) {
-            System.out.println("As you approach the Westland Woods you feel consumed by dark magic. \nYou hear a dark voice that says *only the enchanted may enter.*\n");
+            System.out.println("As you approach the Westland Woods you feel consumed by dark magic. \nYou hear a dark voice that says *only the enchanted may enter.*\n You run back in fear.");
             return;
         }
         

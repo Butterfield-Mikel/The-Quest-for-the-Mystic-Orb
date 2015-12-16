@@ -17,10 +17,9 @@ import model.Player;
 public class SeaView extends View {
     
        public SeaView() {
-        super("You stand next to the (B)each of the sea, as you \n"
-                + "start to relax you remember that you have a kingdom to \n"
-                + "save. In the distance you see a great sea. You see a  \n"
-                + "(S)hip with nobody on it, a long (B)each, and some (D)ocks.");
+        super("You find yourself standing alongside the sea. (S)outh of \n"
+                + "you there is a ship and there are some docks to the \n"
+                + "(N)orth. Also, there is a beach to the (E)ast.");
     }
     
         /**
@@ -34,10 +33,10 @@ public class SeaView extends View {
             case 'S' :
                 showShip();
                 break;
-            case 'B' :
+            case 'E' :
                 showBeach();
                 break;
-            case 'D' :
+            case 'N' :
                 showDocks();
                 break;
             default:
@@ -51,7 +50,7 @@ public class SeaView extends View {
       MapControl mc = new MapControl();
         Player p = Game.getInstance().getPlayer();
         
-        if(!p.hasItem("Corn")) {
+        if(!p.hasItem("Bucket")) {
             System.out.println("You go to the beach but there is nothing to do yet so you return to the sea. \n");
             return;
         }

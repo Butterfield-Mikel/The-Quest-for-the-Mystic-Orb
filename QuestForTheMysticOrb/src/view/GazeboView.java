@@ -19,7 +19,7 @@ public class GazeboView extends View {
     public GazeboView() {
         super("At the oter end of the enchanted garden you find yourself \n"
                 + "at a gazebo. There isn't anything here that apears to be \n"
-                + "useful. You can go back to the main part of the (E)nchanted garden. \n"
+                + "useful. You can go (N)orth to the main part of the enchanted garden. \n"
                 );
                
     }
@@ -32,7 +32,7 @@ public class GazeboView extends View {
     @Override
     public boolean doAction(char input) {
         switch (input) {
-            case 'E':
+            case 'N':
               showEnchantedGarden();
         }
         return true;

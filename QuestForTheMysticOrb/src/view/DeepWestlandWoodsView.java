@@ -13,7 +13,7 @@ import model.Player;
 
 /**
  *
- * @author mannj14
+ * @author Mikel
  */
 public class DeepWestlandWoodsView extends View {
     
@@ -21,7 +21,7 @@ public class DeepWestlandWoodsView extends View {
         super("You are in the Deep Westland Woods, it seems rather dark and scary. \n"
         + "As you look deeper into the woods you see what apears to be an orb of some kind. \n"
         + "At last!! You know that it is the orb that you have been questing for. \n"
-        + "You can aproach the (O)rb and take it, or you can (R)un back to the Westland Woods. \n"
+        + "You can aproach the (O)rb and take it, or you can run back (N)orth to the Westland Woods. \n"
        );        
     }
     @Override
@@ -31,7 +31,7 @@ public class DeepWestlandWoodsView extends View {
             case 'O' :
                getMysticOrb();
                 break;
-            case 'R' :          
+            case 'N' :          
                 showWestlandWoods();
                 break;
             default:

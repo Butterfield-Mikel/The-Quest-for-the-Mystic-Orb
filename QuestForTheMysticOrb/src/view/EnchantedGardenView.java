@@ -18,10 +18,10 @@ import model.Player;
 public class EnchantedGardenView extends View {
     //map[4][3].EnchantedGarden();
     public EnchantedGardenView() {
-        super("You find yourself in an enchanted garden. \n"
-                + "You see an (A)pple tree that has a delicous looking \n"
-                + "apple. You can also (S)ee a gazebo in the garden \n"
-                + "or you can go back to the (B)ridge"
+        super("You find yourself in an enchanted garden. You feel the powers of the garden. \n"
+                + "You see an (A)pple tree that has a delicous looking apple on it. \n"
+                + "You can go (W)est to the bridge or (S)outh to the garden's gazebo\n"
+                
               );
     }
     
@@ -36,15 +36,12 @@ public class EnchantedGardenView extends View {
             case 'S' :
                 showGazebo();
                 break;
-            case 'B' :
+            case 'W' :
                 showBridge();
                 break;
             case 'A' :
                 getEnchantedApple();
-                break;
-           
-
-                
+                break;            
             default:
                 System.out.println("ERROR ON INPUT");
                 
@@ -85,7 +82,7 @@ public class EnchantedGardenView extends View {
             return;
         }
         Game.getInstance().getPlayer().getItems().add(i);
-        System.out.println("Take a bite of the apple and it makes you feel enchanted!\n");
+        System.out.println("You pick and eat some of the apple and it makes you feel enchanted!\n");
     }
 }
 

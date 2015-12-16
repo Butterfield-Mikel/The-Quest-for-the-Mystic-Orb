@@ -17,10 +17,9 @@ import model.Player;
 public class ShipView extends View {
     //map[7][1].Ship();
     public ShipView() {
-        super("You are on the ship and you are lucky that there aren't \n"
-                + "pirates or anything like that. That's lucky! \n"
-                + "You can swim back to the (S)ea and go to the beach from there, or \n"
-                + "you can sail (E)ast or (W)east to see where it takes you.");
+        super("You swam to the ship and it looks old and run down. The "
+                + "sails are torn and the wood is splitting everywhere, it's a mess. "
+                + "You can swim (N)orth to the land by the sea or try to sail (W)est or (E)ast. ");
     }
     
         /**

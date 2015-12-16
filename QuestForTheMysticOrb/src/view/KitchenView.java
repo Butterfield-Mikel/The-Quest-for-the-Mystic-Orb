@@ -17,20 +17,19 @@ import model.Player;
 public class KitchenView extends View {
 
     public KitchenView() {
-        super(
-                "\nYou are in the castle's kitchen."
-                + "\nThe kitchen is a mess, and it smells really bad."
-                + "\nYou should go back to the main floor of the (C)astle "
+        super("You are in the castle's kitchen. \n"
+                + "The kitchen is a mess, and it smells really bad. \n"
+                + "You should go (E)ast to the main floor of the castle \n"
                 + "where it doesn't smell so bad."
         );
     }
 
-    //can't get these messages to display, any ideas/
+    
     @Override
     public boolean doAction(char input) {
 
         switch (input) {
-            case 'C':
+            case 'E':
                 showCastle();
                 break;           
             default:

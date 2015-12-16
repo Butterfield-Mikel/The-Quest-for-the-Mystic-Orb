@@ -43,8 +43,7 @@ public class MainMenuView extends View{
                 loadGame();
                 break;
             case 'H' :
-                showHelpMenu();
-                //System.out.println("does this show if i type h?");
+                showHelpMenu();            
                 break;
             case 'E' : 
                 return false;

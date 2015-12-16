@@ -17,23 +17,19 @@ import model.Player;
 public class CaveView extends View {
    
     public CaveView() {
-        super("You find yourself in a forest and you notice that there is a cave. \n"
-        + "as you enter the cave you have the feeling that this might be a bad idea,  \n"
-        + "but teh spirit of adventure is strong. \n"
-        + "What should you do? (C)ontinue deeper into the cave, or (R)eturn to the safety of the woods.  "
-        );
+        super("This location no longer exists" );
+          
+       
     
     }
     @Override
     public boolean doAction(char input) {
         
         switch(input) {
-            case 'C' :
-               // System.out.println("You decide to head deeper in to the cave");
+            case 'C' :             
                 showDeepCave();
                 break;
-            case 'R' :
-               // System.out.println("You decied that risk is not worth it, and to return to the woods.");
+            case 'R' :              
                 showDeepWestlandWoods();
                 break;
             default:

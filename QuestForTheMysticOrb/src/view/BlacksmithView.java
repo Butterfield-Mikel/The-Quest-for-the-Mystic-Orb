@@ -18,11 +18,10 @@ import model.Player;
 public class BlacksmithView extends View {
 
     public BlacksmithView() {
-        super("You see a blacksmith working in his shop. \n"
-                + "he looks very hungry, probably because \n"
-                + "of the curse that has been put on the kingdom. \n"
+        super("You see a blacksmith working in his shop. he looks very hungry,\n"            
+                + " probably because of the curse that has been put on the kingdom. \n"
                 + "You also see a few pair of beautifully crafted (G)auntlets. \n"
-                + "The only direction you can go is back to the (S)outh Kingdom.  ");
+                + "The only direction you can go is (E)ast to the south Kingdom.");
     }
 
     /**
@@ -33,7 +32,7 @@ public class BlacksmithView extends View {
     @Override
     public boolean doAction(char input) {
         switch (input) {
-            case 'S':
+            case 'E':
                 showSouthKingdom();
                 break;
             case 'G':

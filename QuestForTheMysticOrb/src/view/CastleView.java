@@ -24,13 +24,11 @@ public class CastleView extends View {
 
     public CastleView() {
 
-        super("You stand there, alone in the Castle. Looking around the room, Maybe you can \n"
-                + "take one of a few (B)uckets that are on the floor. That might be handy. However, you \n"
-                + "might end up awkwardly carrying a bucket around the whole game, your call.\n"  
-                + "Obvious exits from here are the (T)ower, (D)ungeon, (K)itchen, and (N)north kingdom. \n"
-                + "Also, you can try to (V)isit the king."                             
-                + "What would you like to do? \n"
-                + "Please enter a single letter to preform an action. Action letters can be found above in parenthesis.");
+        super("You find yourself in the castle. The king knows you can \n"
+                + "find the orb and save the kingdom. Looking around you \n"
+                + "see a pile of (B)uckets and a few exits. You can go \n"
+                + "(E)ast to the dungeon, (W)est to the kitchen, (S)outh out \n"
+                + "of the castle, (V)isit the king, or (N)orth to the tower.");
     }
 
     @Override
@@ -40,16 +38,16 @@ public class CastleView extends View {
             case 'B':
                 getBucket();
                 break;
-            case 'D':
+            case 'E':
                 showDungeon();
                 break;
-            case 'K':
+            case 'W':
                 showKitchen();
                 break;
-            case 'T':
+            case 'N':
                 showTower();
                 break;
-            case 'N':
+            case 'S':
                showNorthKingdom();
                 break;
             case 'V':
@@ -114,7 +112,15 @@ public class CastleView extends View {
             System.out.println("The king doesn't want to see you unless you have the mystic orb.");
             return;
     } else {
-               System.out.println("You win");
+               System.out.println("The king welcomes you into his throne room for the first time.");
+               System.out.println("The room is simply marvelous. The king thanks you and calls for ");
+               System.out.println("his royal Mage. after a few minutes the mage comes and takes the orb.");
+               System.out.println("You hear him mumble a spell and you see light shoot out from the orb.");
+               System.out.println("The next day you wake up in your small cotage your small cottage outside");
+               System.out.println("the kingdom. There is a note by your bed that reads *thank you adventurer,");
+               System.out.println("you have saved the entire kingdom.*");
+               System.out.println("You decide to go back to the castle, even though you already win!");
+               
            }
                
       }

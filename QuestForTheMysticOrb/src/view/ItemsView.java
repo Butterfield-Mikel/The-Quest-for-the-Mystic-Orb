@@ -26,11 +26,11 @@ public class ItemsView {
 
             outFile = new FileWriter(fileLocation);
 
-            outFile.write("Bucket = Castle                    | Corn = Farm\n");
+            outFile.write("Bucket = Castle | Corn = Farm\n");
             outFile.write("Enchanted Apple = Enchanted Garden | Gauntlets = Blacksmith\n");
-            outFile.write("Mystic orb = Deep Westland Woods   | Map = Tower \n");
-            outFile.write("Torch = Gallows                    | Knife = Kitchen\n");
-            outFile.write("Water for your bucket = Sea        | \n");
+            outFile.write("Mystic orb = Deep Westland Woods | Map = Tower \n");
+            outFile.write("Torch = Gallows | Knife = Kitchen\n");
+            outFile.write("Water for your bucket = Sea \n");
             outFile.write("Good luck, Adventurer");
 
             outFile.flush();

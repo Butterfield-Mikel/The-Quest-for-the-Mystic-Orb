@@ -20,9 +20,8 @@ public class DocksView extends View {
     //map[5][1].Castle();
 
     public DocksView() {
-        super("You are standing on the docks. \n"
-                + "There is a great (S)ea out there to go exploring about in, or\n"              
-                + "if you are bored though, head back to the (C)rossroads.");
+        super("You are standing on the docks. There is some old rope, but it's too heavy to lift. \n"
+                + "You can go (S)outh and walk along the sea or go (N)orth to the crossroads.");
     }
 
     /**
@@ -36,7 +35,7 @@ public class DocksView extends View {
             case 'S':
                 showSea();
                 break;
-            case 'C':
+            case 'N':
                 showCrossroads();
                 break;        
             default:

@@ -17,11 +17,10 @@ import model.Player;
 public class WestlandWoodsView extends View {
     //map[4][0].WestlandWoods();
     public WestlandWoodsView() {
-        super("You are in the Westland Woods. There's a lot of trees here, \n"
-                + "but you are still close enough to see the town.\n"
-                + "Seriously, there is not a lot to do here, you should probably keep going  \n"
-                + "into the (D)eep Westland Woods or just head back to the (C)rossroads.\n"       
-                + "So what will it be?");
+        super("You find yourself in the cursed Westland Woods. The enchanted apple fills you with, \n"
+                + "Power and lets you withstand the force of the woods. You can go (S)outh deeper into \n"
+                + "the woods, if you dare. You can also go (E)ast to the crossroads. \n"
+                );
     }
     
         /**
@@ -32,10 +31,10 @@ public class WestlandWoodsView extends View {
     @Override
     public boolean doAction(char input) {
         switch(input) {
-            case 'D' :
+            case 'S' :
                 showDeepWestlandWoods();
                 break;
-            case 'C' :
+            case 'E' :
                 showCrossroads();
                 break;
             default:

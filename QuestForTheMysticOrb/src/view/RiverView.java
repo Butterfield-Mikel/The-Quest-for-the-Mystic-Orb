@@ -12,8 +12,7 @@ package view;
 public class RiverView extends View {
        
     public RiverView() {
-            super("You jumped in to a river. Not exactly a shining moment for you. n/"
-                    + "Do you want to try and (S)ave yourself? Or just (G)ive up?");
+            super("This location no longer exists" );
                
     }
     

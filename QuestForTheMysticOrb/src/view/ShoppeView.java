@@ -20,12 +20,12 @@ public class ShoppeView extends View {
         super("You see a shoppe with a huge price markup \n"
                 + "You have seen the owner's house and it's huge. \n"
                 +" There is no way you are going to support this place \n"
-                + "You can (R)eturn to the North Kingdom ");
+                + "You can go (W)est to the north side of the kingdom. ");
     }
      @Override
     public boolean doAction(char input) {
         switch (input) {
-            case 'R':         
+            case 'W':         
                 showNorthKingdom();
             default:
                 System.out.println("ERROR ON INPUT");

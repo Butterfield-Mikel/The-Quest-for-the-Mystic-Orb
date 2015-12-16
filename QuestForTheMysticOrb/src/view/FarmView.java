@@ -18,15 +18,11 @@ import model.Player;
 public class FarmView extends View {
 
     public FarmView() {
-        super("You see a big farm with a small farm house. \n"
-                + "Inside the house you see an old farmer and \n"
-                + "his wife. They both look hungry, but not as \n"
-                + "they have some corn saved from last year’s \n"
-                + "harvest. You really want some of this corn, \n"
-                + "so the farmer tells you that if you will (H)elp \n"
-                + "him measure his farm for seed he will give you \n"
-                + "some corn. The only place you can go is to \n"
-                + "the (S)outh kingdom.  ");
+        super("You approach a small farm house on an old farm. The old farmer \n"
+                + "tells you that his soil is dry on account of the kingdom’s \n"
+                + "curse. He tells you that he will reward you if you (H)elp \n"
+                + "him and give him some water for his crops. You can also go \n"
+                + "(W)est to the southern end of the kingdom.  ");
     }
 
     /**
@@ -41,7 +37,7 @@ public class FarmView extends View {
                 getCorn();
                
                 break;
-            case 'S':
+            case 'W':
                 showSouthKingdom();
                 break;
             default:
@@ -67,11 +63,11 @@ public class FarmView extends View {
       
     Item i = Game.getInstance().getItemByNameAndRemove("Corn");
         if(i == null) {
-            System.out.println("You already helped the farmer!\n");
+            System.out.println("You already watered the farmer’s crops. \n");
             return;
         }
         Game.getInstance().getPlayer().getItems().add(i);
-        System.out.println("You help the farmer on his farm and you are rewarded with Corn.\n");
+        System.out.println("You use your bucket of water to water The farmer’s crops. \nYou are rewarded with an ear of corn. \n");
     
 }
 
