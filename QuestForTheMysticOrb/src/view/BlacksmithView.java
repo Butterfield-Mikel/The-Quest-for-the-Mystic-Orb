@@ -18,7 +18,7 @@ import model.Player;
 public class BlacksmithView extends View {
 
     public BlacksmithView() {
-        super("You see a blacksmith working in his shop. he looks very hungry,\n"            
+        super("You see a blacksmith who is working in his shop. he looks very hungry,\n"            
                 + " probably because of the curse that has been put on the kingdom. \n"
                 + "You also see a few pair of beautifully crafted (G)auntlets. \n"
                 + "The only direction you can go is (E)ast to the south Kingdom.");

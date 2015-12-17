@@ -18,9 +18,9 @@ public class GallowsView extends View {
 
     public GallowsView() {
         super("At the gallows you are fortunate enough to \n"
-                + "be here betweem beheadings. It smells really \n"
-                + "nice compared to the usual smell of execution. The only place to go \n"
-                + "is (E)ast to the northern end of the kingdom.");
+                + "be here between hangings. It smells really \n"
+                + "nice compared to the usual smell of execution. you \n"
+                + "can go (E)ast to the northern end of the kingdom.");
                
     }
 

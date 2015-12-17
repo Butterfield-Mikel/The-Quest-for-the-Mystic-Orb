@@ -87,7 +87,7 @@ public class SouthKingdomView extends View {
         Player p = Game.getInstance().getPlayer(); 
         
         if(!p.hasItem("Corn")) {
-            System.out.println("You approach a blacksmith working on a few pair of beautifully \n"
+            System.out.println("You approach a blacksmith who is working on a few pair of beautifully \n"
                     + "crafted gauntlets. He looks hungry and upset because of his hunger. \n"
                     + "He gives you a bad look so you return to the south end of the Kingdom.");
             return;

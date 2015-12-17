@@ -116,9 +116,9 @@ public class CastleView extends View {
                System.out.println("The room is simply marvelous. The king thanks you and calls for ");
                System.out.println("his royal Mage. after a few minutes the mage comes and takes the orb.");
                System.out.println("You hear him mumble a spell and you see light shoot out from the orb.");
-               System.out.println("The next day you wake up in your small cotage your small cottage outside");
-               System.out.println("the kingdom. There is a note by your bed that reads *thank you adventurer,");
-               System.out.println("you have saved the entire kingdom.*");
+               System.out.println("The next day you wake up in your small cottage outside");
+               System.out.println("the kingdom. There is a note by your bed that reads 'thank you adventurer,");
+               System.out.println("you have saved the entire kingdom. Also, the king wants his bucket back.'");
                System.out.println("You decide to go back to the castle, even though you already win!");
                
            }
