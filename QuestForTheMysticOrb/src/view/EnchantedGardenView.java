@@ -20,9 +20,7 @@ public class EnchantedGardenView extends View {
     public EnchantedGardenView() {
         super("You find yourself in an enchanted garden. You feel the powers of the garden. \n"
                 + "You see an (A)pple tree that has a delicous looking apple on it. \n"
-                + "You can go (W)est to the bridge or (S)outh to the garden's gazebo\n"
-                
-              );
+                + "You can go (W)est to the bridge or (S)outh to the garden's gazebo\n");
     }
     
         /**
@@ -34,9 +32,45 @@ public class EnchantedGardenView extends View {
     public boolean doAction(char input) {
         switch(input) {
             case 'S' :
+                System.out.println(""+
+"                   ,'. \n" +
+"                 ,(   ).  \n" +
+"               ,/       \\.            _ \n" +
+"              /    _  _   \\         /  \n" +
+"            /     ( `' )    \\      !  (\n" +
+"           (       \\  /      )      \\ _  \n" +
+"          ,/        `'       \\.\n" +
+"         (_____________________)\n" +
+"        ((((((((|||||||||))))))))\n" +
+"       (=========================)\n" +
+"        ) ( )(             )( ) ( \n" +
+"        | | !!             !! | | \n" +
+"        | | !!             !! | | \n" +
+"        | | !!             !! | | \n" +
+"        | | !!             !! | | \n" +
+"        | | !!             !! | | \n" +
+"        | | )(             )( | | \n" +
+"        ) (.''~~~~~~~~~~~~~''.) (\n");
+                
                 showGazebo();
                 break;
             case 'W' :
+                
+                                System.out.println(""+             
+"   ^^                __..-:'':__:..:__:'':-..__\n" +
+"                 _.-:__:.-:'':  :  :  :'':-.:__:-._\n" +
+"               .':.-:  :  :  :  :  :  :  :  :  :._:'.\n" +
+"            _ :.':  :  :  :  :  :  :  :  :  :  :  :'.: _\n" +
+"           [ ]:  :  :  :  :  :  :  :  :  :  :  :  :  :[ ]\n" +
+"           [ ]:  :  :  :  :  :  :  :  :  :  :  :  :  :[ ]\n" +
+"  :::::::::[ ]:__:__:__:__:__:__:__:__:__:__:__:__:__:[ ]:::::::::::\n" +
+"  !!!!!!!!![ ]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!![ ]!!!!!!!!!!!\n" +
+"  ^^^^^^^^^[ ]^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[ ]^^^^^^^^^^^\n" +
+"           [ ]                                        [ ]\n" +
+"           [ ]                                        [ ]\n" +
+"           [ ]                                        [ ]\n" +
+"   ~~^_~^~/   \\~^-~^~ _~^-~_^~-^~_^~~-^~_~^~-~_~-^~_^/   \\~^ ~~_ ^\n");
+                
                 showBridge();
                 break;
             case 'A' :

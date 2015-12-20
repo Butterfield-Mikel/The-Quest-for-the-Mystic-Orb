@@ -31,6 +31,19 @@ public class ShipView extends View {
     public boolean doAction(char input) {
         switch(input) {
             case 'N' :
+                 System.out.println(""+
+"    _.-'```\"\"\"``\"-._\n" +
+"    /\"`                '.\n" +
+"    `':.,_               \"._\n" +
+"         \\`'-._             `'-._\n" +
+"          \\    `:._              `'-._          _\n" +
+"          |      \\ `:_                `\"--\"--\"``\n" +
+"          |       \\   `:_\n" +
+"          |      :|    \\ '.\n" +
+"~~~~~~~~~~|       |     |  `:_\n" +
+"~~   ~~   |       |:    |     `:_\n" +
+"  ~    ~~ |:      |     |\n" +
+" ~   ~    |       |\n");
                 showSea();
                 break;
             case 'E' :

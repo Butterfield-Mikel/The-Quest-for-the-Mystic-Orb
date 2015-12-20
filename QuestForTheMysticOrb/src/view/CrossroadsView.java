@@ -20,10 +20,10 @@ public class CrossroadsView extends View {
         super("You find yourself at a crossroad. Also, there is an old wood \n"
                 + "street sign that reads \n"
               
-                + " (N)orth to the South Kingdom \n"
-                + " (E)ast to the bridge \n"
-                + " (S)outh to the Docks \n"
-                + " (W)est to the Westland Woods. \n");
+                + "   (N)orth to the South Kingdom \n"
+                + "   (E)ast to the bridge \n"
+                + "   (S)outh to the Docks \n"
+                + "   (W)est to the Westland Woods. \n");
     
     }
     @Override
@@ -31,23 +31,67 @@ public class CrossroadsView extends View {
         
         switch(input) {
             case 'N' :
-                //System.out.println("You decide to return to the South Kingdom. \n");
+                                System.out.println(""+
+"      (())                           (())\n" +
+"     ((()))  __          .      __  ((()))\n" +
+"    (((())))(())     .         (())(((())))\n" +
+"   ((((()))))())) _         _ ((()((((()))))\n" +
+"     |____|((())))()   ,   ()(((()))|____|\n" +
+"     |_[]_| |__|((())__A__((())|__| |_[]_|\n" +
+"    _|    |_|[]|_|_|I-I-I-I|_|_|[]|_|    |_\n" +
+"   |-|    |-|  |-|||-I-I-I-|||-|  |-|    |-|\n" +
+"  (|-|    |-|  |-| |I-I-I-I| |-|  |-|    |-|)\n" +
+" ((|-| __ |-|  |-| |-I-I-I-| |-|  |-| __ |-|))\n" +
+" ()|-|_XX_|-|__|T|_|[T]-[T]|_|T|__|-|_XX_|-|()\n" );
                 showSouthKingdom();
                 break;
             case 'E' :
-                //System.out.println("You decide to head to the bridge \n");
+                System.out.println(""+
+"   ^^                __..-:'':__:..:__:'':-..__\n" +
+"                 _.-:__:.-:'':  :  :  :'':-.:__:-._\n" +
+"               .':.-:  :  :  :  :  :  :  :  :  :._:'.\n" +
+"            _ :.':  :  :  :  :  :  :  :  :  :  :  :'.: _\n" +
+"           [ ]:  :  :  :  :  :  :  :  :  :  :  :  :  :[ ]\n" +
+"           [ ]:  :  :  :  :  :  :  :  :  :  :  :  :  :[ ]\n" +
+"  :::::::::[ ]:__:__:__:__:__:__:__:__:__:__:__:__:__:[ ]:::::::::::\n" +
+"  !!!!!!!!![ ]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!![ ]!!!!!!!!!!!\n" +
+"  ^^^^^^^^^[ ]^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[ ]^^^^^^^^^^^\n" +
+"           [ ]                                        [ ]\n" +
+"           [ ]                                        [ ]\n" +
+"           [ ]                                        [ ]\n" +
+"   ~~^_~^~/   \\~^-~^~ _~^-~_^~-^~_^~~-^~_~^~-~_~-^~_^/   \\~^ ~~_ ^\n");
                 showBridge();
                 break;
             case 'S' :
-                //System.out.println("You decide that a walk down to the Dock might be relaxing \n");
+                System.out.println(""+
+"                       _  _                 |-._\n" +
+"                    -         - _           |-._|\n" +
+"                 O                 (). _    |\n" +
+"                                     '(_) __|__\n" +
+"                                     [__|__|_|_]\n" +
+"  ~~ _|_ _|_ _|_  ~~     ~~~          |__|__|_|\n" +
+"     ||| ||| |||      ~~      ~~~     |_|__|__|\n" +
+"     _|___|___|__.      ~~~ ~~       /|__|__|_|\n" +
+"    |___________/       ~~~~  ~~~   / |_|__|__|\n" +
+"  ~     ~~ ~      ~~       ~~      /  |_| |___|\n" +
+"     ~~~~    ~~~   ~~~~   ~   ~~  /    \n");
                 showDocks();
                 break;
             case 'W' :
-                //System.out.println("You have entered the Westland Woods \n");
+                  Player p = Game.getInstance().getPlayer();
+        if(p.hasItem("EnchantedApple")) {
+                System.out.println(""+
+"               ,@@@@@@@,\n" +
+"       ,,,.   ,@@@@@@/@@,  .oo8888o.\n" +
+"    ,&%%&%&&%,@@@@@/@@@@@@,8888\\88/8o\n" +
+"   ,%&\\%&&%&&%,@@@\\@@@/@@@88\\88888/88'\n" +
+"   %&&%&%&/%&&%@@\\@@/ /@@@88888\\88888'\n" +
+"   %&&%/ %&%%&&@@\\ V /@@' `88\\8 `/88'\n" +
+"   `&%\\ ` /%&'    |.|        \\ '|8'\n" +
+"       |o|        | |         | |\n" +
+"       |.|        | |         | |\n" +
+"    \\\\/ ._\\//_/__/  ,\\_//__\\\\/.  \\_//__/_\n"); }
                 showWestlandWoods();
-                break;
-            case 'T' :
-               //System.out.println("You talk to the Mystic, she warns you to avoid Boats this month \n");
                 break;    
             default:
                 System.out.println("ERROR ON INPUT");
@@ -96,7 +140,7 @@ public class CrossroadsView extends View {
         Player p = Game.getInstance().getPlayer();
         
          if(!p.hasItem("EnchantedApple")) {
-            System.out.println("As you approach the Westland Woods you feel consumed by dark magic. \nYou hear a dark voice that says *only the enchanted may enter.*\n You run back in fear.");
+            System.out.println("As you approach the Westland Woods you feel consumed by dark magic. \nYou hear a dark voice that says *only the enchanted may enter.*\nYou run back in fear.");
             return;
         }
         

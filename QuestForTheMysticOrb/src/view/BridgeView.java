@@ -34,9 +34,39 @@ public class BridgeView extends View {
     public boolean doAction(char input) {
         switch (input) {
             case 'E':
+                  Player p = Game.getInstance().getPlayer();
+        if(p.hasItem("Gauntlets")) {
+                System.out.println(""+
+"         &&& &&  & &&\n" +
+"      && &\\/&\\|& ()|/ @, &&\n" +
+"      &\\/(/&/&||/& /_/)_&/_&\n" +
+"   &() &\\/&|()|/&\\/ '%\" & ()\n" +
+"  &_\\_&&_\\ |& |&&/&__%_/_& &&\n" +
+"&&   && & &| &| /& & % ()& /&&\n" +
+" ()&_---()&\\&\\|&&-&&--%---()~\n" +
+"     &&     \\|||\n" +
+"             |||\n" +
+"             |||\n" +
+"             |||\n" +
+"       , -=-~  .-^- _\n"); }
                 showEnchantedGarden();
                 break;            
             case 'W':
+                System.out.println(""+
+"                    /  :  \\           ______\n" +
+"                   /   .   \\         | ~~~~ |\n" +
+"                  /    .    \\        | ~~~  |\n" +
+"                 /           \\       |______|\n" +
+" ````````````````            ````````````||```\n" +
+"  --     --     --     --     --     --  ||\n" +
+"_______________        |        _________||_____\n" +
+"             /                   \\       ||\n" +
+"            /                     \\\n" +
+"           /           |           \\\n" +
+"          /                         \\\n" +
+"         /                           \\\n" +
+"        /              |              \\\n" +
+"       /               |               \\   \n");
                 showCrossroads();
                 break;
             default:

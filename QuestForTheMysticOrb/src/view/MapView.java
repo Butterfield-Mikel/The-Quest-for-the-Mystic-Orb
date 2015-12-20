@@ -17,15 +17,6 @@ public class MapView extends View {
     
     
      public MapView() {
-/*
-   int countDown = 3;
-        while (countDown < 1) {
-            System.out.println("Loading map " + countDown + ".");
-            System.out.println(countDown);
-            countDown--;
-        }
-         */
-    
 
     super("+---+---+---+---+---+---+---+---+ \n"
         + "|---+---+---+TWR+---+---+---+---| \n"
@@ -60,7 +51,7 @@ public class MapView extends View {
             System.out.println("SHP=Ship BST=Blacksmith SKD=South Kingdom FRM=Farm WWD=Westland Woods ");
             System.out.println("BDG=Bridge GDN=Garden DWD=Deep Westland Woods GZB=Gazebo XRD=Crossroads");
             System.out.println("DOC=Docks SEA=Sea BCH=Beach SOP=Shoppe SHP=Ship");
-            System.out.println("Press (T) to return to the tower. Also, you can (P)rint the items you see to an external file.");
+            System.out.println("Press (T) to return to the tower.");
             keyCount++;
 
         } while (keyCount < 2);
@@ -76,9 +67,6 @@ public class MapView extends View {
         switch (input) {
             case 'T':
                showTower();
-                break;        
-                case 'P':
-                  saveItems(); 
                 break;         
             default:
                 System.out.println("ERROR ON INPUT");

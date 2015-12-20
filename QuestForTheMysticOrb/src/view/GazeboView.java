@@ -33,6 +33,19 @@ public class GazeboView extends View {
     public boolean doAction(char input) {
         switch (input) {
             case 'N':
+                                System.out.println(""+
+"         &&& &&  & &&\n" +
+"      && &\\/&\\|& ()|/ @, &&\n" +
+"      &\\/(/&/&||/& /_/)_&/_&\n" +
+"   &() &\\/&|()|/&\\/ '%\" & ()\n" +
+"  &_\\_&&_\\ |& |&&/&__%_/_& &&\n" +
+"&&   && & &| &| /& & % ()& /&&\n" +
+" ()&_---()&\\&\\|&&-&&--%---()~\n" +
+"     &&     \\|||\n" +
+"             |||\n" +
+"             |||\n" +
+"             |||\n" +
+"       , -=-~  .-^- _\n");
               showEnchantedGarden();
         }
         return true;
